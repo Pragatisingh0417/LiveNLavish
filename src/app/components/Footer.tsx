@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Logo + About */}
         <div>
           <Image
-            src="/images/golden diamond 2tr.png"
+            src="/images/logo-new.png"
             alt="Zinnia Gardens"
             width={150}
             height={80}
@@ -45,7 +45,7 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-[#B98B4E]">About Us</Link></li>
             <li><Link href="/services" className="hover:text-[#B98B4E]">Services</Link></li>
             <li><Link href="/celebrations" className="hover:text-[#B98B4E]">Celebrations</Link></li>
-            <li><Link href="/gallery" className="hover:text-[#B98B4E]">Gallery</Link></li>
+            <li><Link href="/lavishBranding" className="hover:text-[#B98B4E]">My Brand</Link></li>
           </ul>
         </div>
 

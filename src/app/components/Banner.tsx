@@ -58,8 +58,10 @@ export default function Banner() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-widest mb-5 px-4 
-          bg-gradient-to-r from-[#d7b47f] via-[#f2d8a7] to-[#d7b47f] text-transparent bg-clip-text drop-shadow"
+        className="text-2xl tracking-normal sm:text-4xl sm:tracking-widest md:text-5xl lg:text-6xl 
+font-serif mb-5 px-4 bg-gradient-to-r from-[#d7b47f] via-[#f2d8a7] to-[#d7b47f] 
+text-transparent bg-clip-text drop-shadow"
+
       >
         LIVE · N · LAVISH · EVENTS
       </motion.h1>

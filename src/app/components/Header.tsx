@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#F4EFEA] text-[#F4EFEA] shadow-md z-50">
-      <nav className="max-w-[1400px] mx-auto flex justify-between items-center px-4 sm:px-2 py-8 transition-all duration-300">
+      <nav className="max-w-[1400px] mx-auto flex justify-between items-center px-4 sm:px-2 py-5 transition-all duration-300">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-3xl p-2 rounded-md hover:bg-[#4A2A0C] transition"
+          className="lg:hidden text-3xl p-2 rounded-md bg-[#B98B4E] hover:bg-[#B98B4E] transition"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`lg:hidden bg-[#F4EFEA] text-[#3A1E01] transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden bg-[#F4EFEA] text-[#B98B4E] transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -86,8 +86,8 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className={`block font-medium px-3 py-2 rounded-md transition ${
                 pathname === link.href
-                  ? "bg-[#3A1E01] text-white"
-                  : "hover:bg-[#3A1E01] hover:text-white"
+                  ? "bg-[#B98B4E] text-white"
+                  : "hover:bg-[#997443] hover:text-white"
               }`}
             >
               {link.name}
