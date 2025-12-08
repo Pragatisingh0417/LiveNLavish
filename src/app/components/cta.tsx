@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="relative py-20 text-white overflow-hidden">
+    <section className="relative py-40 text-white overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/home20-slider_1.jpeg"
@@ -18,9 +18,9 @@ export default function CTA() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content LEFT CORNER */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
-        <div className="w-full max-w-lg text-left">
-          <h2 className="text-3xl sm:text-4xl font-light mb-6 leading-snug">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="w-full  text-left">
+          <h2 className="text-3xl sm:text-5xl font-light mb-6 leading-snug">
             A Love to Last a Lifetime
             <br className="hidden sm:block" />
             By Contacting Us Directly
@@ -31,7 +31,7 @@ export default function CTA() {
           </p>
 
           <Link href="/contact">
-            <button className="bg-[#8b6135] text-gray-200 px-8 py-3 rounded-full font-medium hover:bg-[#B98B4E] transition-all duration-300">
+            <button className="bg-[#8A632D] text-gray-200 px-8 py-3 rounded-full font-medium hover:bg-[#000000] transition-all duration-300">
               Book An Appoinment
             </button>
           </Link>

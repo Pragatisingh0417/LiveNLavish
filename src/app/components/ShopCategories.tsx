@@ -42,15 +42,19 @@ export default function ShopCategories() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-4xl  sm:text-5xl font-bold text-[#211e59] text-center mb-10"
-        >
-          Shop All Categories
-        </motion.h2>
+       {/* Title */}
+<motion.h2
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="text-4xl sm:text-5xl font-bold text-[#121212] text-center mb-10"
+>
+  Shop All Categories
+
+<hr className="w-46 h-1 bg-[#7b7b7b] mx-auto border-0 rounded-full mt-3" />
+</motion.h2>
+
 
         {/* Animated Grid */}
         <motion.div
@@ -83,7 +87,7 @@ export default function ShopCategories() {
 
                   {/* Name */}
                   <h3 className="text-center text-lg font-medium mt-4 
-                    group-hover:text-[#B98B4E] transition-all duration-300 tracking-wide">
+                    group-hover:text-[#7b7b7b] transition-all duration-300 tracking-wide">
                     {cat.name}
                   </h3>
 

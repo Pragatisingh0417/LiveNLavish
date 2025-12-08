@@ -46,7 +46,7 @@ const catalogs = [
 
 export default function Catalogs() {
   return (
-    <section className="py-20 bg-[#fffdf7]">
+    <section className="py-10 bg-[#fffdf7]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* PAGE TITLE */}
@@ -54,7 +54,7 @@ export default function Catalogs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-serif text-center text-[#b8846b] mb-12 py-10"
+          className="text-4xl md:text-5xl font-serif text-center text-[#000000] mb-12 py-10"
         >
           Catalogs
         </motion.h1>

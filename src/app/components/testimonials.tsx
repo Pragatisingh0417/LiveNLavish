@@ -16,24 +16,7 @@ export default function TestimonialSlider() {
   ];
 
   return (
-    <section className="py-10 bg-[#fffff2] relative overflow-hidden">
-      
-      {/* Floating Decorative Shape (now visible) */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 0.25, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="absolute bottom-0 left-0 pointer-events-none z-0"
-      >
-        <Image
-          src="/images/a_make_the_colour_of_l.png"
-          alt="Decor"
-          width={350}
-          height={350}
-          className="w-[180px] sm:w-[250px] lg:w-[350px] opacity-70"
-        />
-      </motion.div>
+    <section className="py-10 bg-gradient-to-b from-[#d1cccc] via-[#fffdfb] to-[#fffdfb] relative overflow-hidden filter grayscale">
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center py-10">

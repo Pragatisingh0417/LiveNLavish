@@ -18,9 +18,9 @@ export default function LavishBrandingWorkshop() {
   ];
 
   return (
-    <section className="py-20 bg-[#fffdf7]">
+    <section className=" bg-[#fffdf7]">
 
-      <section className="bg-[#fffdf7] py-20">
+      <section className="bg-[#b6b3ac] py-20">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
@@ -28,13 +28,13 @@ export default function LavishBrandingWorkshop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-serif text-center text-[#b8846b] mb-8"
+          className="text-4xl md:text-5xl font-serif text-center text-[#000000] mb-8"
         >
           Enhance My Brand
         </motion.h1>
 
         {/* Subheading */}
-        <p className="text-center text-lg max-w-3xl mx-auto text-[#6b4b3a] mb-10">
+        <p className="text-center text-lg max-w-3xl mx-auto text-[#000000] mb-10">
           Are You Ready To Kickstart Your Business and Take Your Brand To The Next Level Today?
         </p>
 
@@ -46,35 +46,35 @@ export default function LavishBrandingWorkshop() {
                 type="text"
                 placeholder="Full Name"
                 className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-                text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+                text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#000000]"
               />            <input type="email" placeholder="Email" className="input" required />
             <input
                 type="email"
                 placeholder="Email"
                 className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-                text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+                text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#000000]"
               />
 
               <input
                 type="text"
                 placeholder="Business Name"
                 className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-                text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+                text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#000000]"
               />
 
               <input
                 type="text"
                 placeholder="Phone Number"
                 className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-                text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+                text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#000000]"
               />
 <textarea
                 placeholder="Tell us about your goals…"
-                className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white text-[#6b4b3a] 
-                focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a] md:col-span-2 h-32"
+                className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white text-[#000000] 
+                focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#000000] md:col-span-2 h-32"
               ></textarea>
 
-            <button className="md:col-span-2 bg-[#b8846b] hover:bg-[#a3735a] 
+            <button className="md:col-span-2 bg-[#000000] hover:bg-[#000000] 
                 text-white py-3 rounded-xl text-lg transition">
                 Submit Inquiry
               </button>
@@ -107,29 +107,29 @@ export default function LavishBrandingWorkshop() {
             transition={{ duration: 0.7 }}
             className="space-y-6"
           >
-            <h2 className="text-3xl font-serif text-[#b8846b]">Hey Lavish Fam!</h2>
+            <h2 className="text-3xl font-serif text-[#000000]">Hey Lavish Fam!</h2>
 
-            <p className="text-[#6b4b3a] leading-relaxed">
+            <p className="text-[#000000] leading-relaxed">
               I’m <b>Lekita Logan-Range</b>, an expert wedding planner, event designer & brand specialist 
               with over 10 years of experience.
             </p>
 
-            <p className="text-[#6b4b3a] leading-relaxed">
+            <p className="text-[#000000] leading-relaxed">
               I help wedding planners, event designers and female entrepreneurs generate more quality 
               leads and earn up to <strong>10x their current revenue</strong> through my TAQ system and 
               automated marketing technology!
             </p>
 
-            <p className="italic text-[#b8846b] text-lg">
+            <p className="italic text-[#000000] text-lg">
               “You only make money when you take action!”
             </p>
 
-            <p className="text-[#6b4b3a]">
+            <p className="text-[#000000]">
               Together, we will create a customized marketing campaign guaranteed to bring high-quality 
               leads directly to your brand.
             </p>
 
-            <h3 className="text-xl font-serif text-[#b8846b]">Take Action Queen 👑</h3>
+            <h3 className="text-xl font-serif text-[#000000]">Take Action Queen 👑</h3>
           </motion.div>
 
         </div>
@@ -141,12 +141,12 @@ export default function LavishBrandingWorkshop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-serif text-center text-[#b8846b] mb-12"
+          className="text-4xl md:text-5xl font-serif text-center text-[#000000] mb-12 mt-10"
         >
           Lavish Branding Workshop
         </motion.h1>
 
-        <p className="text-center text-[#6b4b3a] mb-10 text-lg">
+        <p className="text-center text-[#000000] mb-10 text-lg">
           (All workshops are virtual — join from anywhere in the world)
           <br />
           <span className="font-semibold">
@@ -171,7 +171,7 @@ export default function LavishBrandingWorkshop() {
 
         {/* WORKSHOP FORM */}
         <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-serif text-[#b8846b] mb-6 text-center">
+          <h2 className="text-2xl font-serif text-[#000000] mb-6 text-center">
             Register For Workshop
           </h2>
 
@@ -180,37 +180,37 @@ export default function LavishBrandingWorkshop() {
               type="text"
               placeholder="Full Name"
               className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-              text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+              text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#a08c7a]"
             />
 
             <input
               type="email"
               placeholder="Email"
               className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-              text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+              text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#a08c7a]"
             />
 
             <input
               type="text"
               placeholder="Business Name"
               className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-              text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+              text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#a08c7a]"
             />
 
             <input
               type="text"
               placeholder="Phone Number"
               className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white 
-              text-[#6b4b3a] focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a]"
+              text-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#a08c7a]"
             />
 
             <textarea
               placeholder="What would you like help with?"
-              className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white text-[#6b4b3a] 
-              focus:outline-none focus:ring-2 focus:ring-[#b8846b] placeholder:text-[#a08c7a] md:col-span-2 h-32"
+              className="w-full p-3 rounded-xl border border-[#d7c7b3] bg-white text-[#000000] 
+              focus:outline-none focus:ring-2 focus:ring-[#000000] placeholder:text-[#a08c7a] md:col-span-2 h-32"
             ></textarea>
 
-            <button className="md:col-span-2 bg-[#b8846b] hover:bg-[#a3735a] text-white py-3 rounded-xl text-lg transition">
+            <button className="md:col-span-2 bg-[#000000] hover:bg-[#373737] text-white py-3 rounded-xl text-lg transition">
               Submit Registration
             </button>
           </form>
@@ -225,12 +225,12 @@ export default function LavishBrandingWorkshop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-serif text-center text-[#b8846b] mb-10"
+          className="text-4xl md:text-5xl font-serif text-center text-[#000000] mb-10"
         >
           City Entertainment Guide
         </motion.h1>
 
-        <p className="text-center text-[#6b4b3a] text-lg mb-10 max-w-3xl mx-auto">
+        <p className="text-center text-[#000000] text-lg mb-10 max-w-3xl mx-auto">
           Enhance your business brand awareness, generate quality leads and connect with attendees  
           of intimate, online and large-scale events across South Florida.
           <br />
@@ -245,7 +245,7 @@ export default function LavishBrandingWorkshop() {
           <div className="stat-card">Avg Household Income: $69,037–$82,844</div>
         </div>
 
-        <p className="text-center text-[#6b4b3a] text-lg mb-12">
+        <p className="text-center text-[#000000] text-lg mb-12">
           We generate high-quality leads for your business through automated technology solutions  
           tailored specifically to your brand.
         </p>
@@ -253,12 +253,12 @@ export default function LavishBrandingWorkshop() {
         {/* CTA BUTTONS */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
-          <button className="bg-[#b8846b] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#a3735a] transition">
+          <button className="bg-[#000000] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#a3735a] transition">
             Request Quote
           </button>
 
-          <button className="border border-[#b8846b] text-[#b8846b] px-8 py-4 rounded-xl text-lg 
-            hover:bg-[#b8846b] hover:text-white transition">
+          <button className="border border-[#000000] text-[#000000] px-8 py-4 rounded-xl text-lg 
+            hover:bg-[#000000] hover:text-white transition">
             Schedule Strategy Session
           </button>
 

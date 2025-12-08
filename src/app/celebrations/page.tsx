@@ -5,14 +5,14 @@ import TestimonialSlider from "../components/testimonials";
 
 export default function CelebrationsPage() {
   return (
-    <section className="py-30  bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20  bg-white">
+      <div className="max-w-7xl mx-auto px-6 mb-10">
         
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl  sm:text-5xl font-bold text-[#211e59] text-center mb-10 py-10"
+          className="text-4xl  sm:text-5xl font-bold text-[#1f1f20] text-center mb-10 "
         >
           Celebrations That Tell Your Story
         </motion.h2>
@@ -26,7 +26,7 @@ export default function CelebrationsPage() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold text-[#efd38d]">
+            <h3 className="text-2xl font-semibold text-[#8A632D]">
               Types of Celebrations
             </h3>
 

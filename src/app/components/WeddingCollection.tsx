@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function WeddingCollection() {
   return (
-    <section className="w-full py-20 px-6 lg:px-20 bg-white">
+    <section className="w-full py-20 px-6 lg:px-20 bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#b9b5b5]">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
 
         {/* LEFT TEXT (col-1) */}
         <div className="flex flex-col justify-start">
-          <p className="text-sm tracking-wide text-gray-500 mb-4">
+          <p className="text-sm tracking-wide text-[#7b7b7b] mb-4">
             Your Forever Begins Here
           </p>
 
@@ -25,7 +25,7 @@ export default function WeddingCollection() {
               alt="celebration"
               width={600}
               height={800}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function WeddingCollection() {
               alt="wedding"
               width={600}
               height={800}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
 
@@ -51,7 +51,7 @@ export default function WeddingCollection() {
               alt="celebration"
               width={600}
               height={800}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
            <div className="col-span-1 h-[300px]">
@@ -60,7 +60,7 @@ export default function WeddingCollection() {
               alt="celebration"
               width={600}
               height={800}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
 
@@ -71,7 +71,7 @@ export default function WeddingCollection() {
               alt="bride couple"
               width={1200}
               height={600}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
 
@@ -88,7 +88,7 @@ Complete form to receive a customized quote from us            </p>
 
             <Link
               href="/contact"
-              className="bg-[#B98B4E] text-white px-7 py-3 rounded-full text-sm font-medium"
+              className="bg-[#8A632D] text-white px-7 py-3 rounded-full text-sm font-medium"
             >
               Request A Call Back
             </Link>
@@ -101,7 +101,7 @@ Complete form to receive a customized quote from us            </p>
               alt="couple elegant"
               width={500}
               height={600}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl filter grayscale"
             />
           </div>
         </div>

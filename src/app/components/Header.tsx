@@ -21,13 +21,13 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#F4EFEA] text-[#F4EFEA] shadow-md z-50">
+    <header className=" top-0 left-0 w-full bg-[#060606] text-[#F4EFEA] shadow-md z-50">
       <nav className="max-w-[1400px] mx-auto flex justify-between items-center px-4 sm:px-2 py-5 transition-all duration-300">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo-new.png"
-            alt="livenlavishevents"
+            src="/images/todays-new.png"
+            alt="livenlavishevents" 
             width={160}
             height={60}
             className=" w-full sm:w-[160px] md:w-[100px] h-auto"
@@ -43,8 +43,8 @@ export default function Header() {
               href={link.href}
               className={`px-3 py-2 rounded-full text-sm xl:text-base transition-all duration-200 ${
                 pathname === link.href
-                  ? "bg-[#B98B4E] text-white"
-                  : "hover:bg-[#B98B4E] text-black hover:text-white"
+                  ? "bg-[#8A632D] text-white"
+                  : "hover:bg-[#8A632D] text-white hover:text-white"
               }`}
             >
               {link.name}
@@ -55,8 +55,8 @@ export default function Header() {
         {/* Desktop Book Button */}
         <div className="hidden lg:flex">
           <Link
-            href="/book-viewing"
-            className="bg-[#B98B4E] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#8A632D] transition shadow-sm hover:shadow-md"
+            href="/contact"
+            className="bg-[#8A632D] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#8A632D] transition shadow-sm hover:shadow-md"
           >
             Book Now
           </Link>
@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-3xl p-2 rounded-md bg-[#B98B4E] hover:bg-[#B98B4E] transition"
+          className="lg:hidden text-3xl p-2 rounded-md bg-[#000000]  transition"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`lg:hidden bg-[#F4EFEA] text-[#B98B4E] transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden bg-[#F4EFEA] text-[#000000] transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -86,17 +86,17 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className={`block font-medium px-3 py-2 rounded-md transition ${
                 pathname === link.href
-                  ? "bg-[#B98B4E] text-white"
-                  : "hover:bg-[#997443] hover:text-white"
+                  ? "bg-[#000000] text-white"
+                  : "hover:bg-[#000000] hover:text-white"
               }`}
             >
               {link.name}
             </Link>
           ))}
           <Link
-            href="/book-viewing"
+            href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="bg-[#B98B4E] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#3A1E01] transition text-center"
+            className="bg-[#000000] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#000000] transition text-center"
           >
             Book Now
           </Link>

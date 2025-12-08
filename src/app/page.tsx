@@ -7,6 +7,7 @@ import ShopCategories from "./components/ShopCategories";
 import Testimonials from "./components/testimonials";
 import OfferSection from "./components/OfferSection";
 import FAQ from "./components/FAQ";
+import Catalogs from "./components/Catalogs-section";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
     <WeddingCollection />
     <CTA />
     <ShopCategories />
+    <Catalogs />
     <Testimonials />
-    <OfferSection />
+    {/* <OfferSection /> */}
     <FAQ />
     </>
   );
