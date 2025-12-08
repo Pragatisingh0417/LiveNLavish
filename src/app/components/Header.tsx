@@ -43,8 +43,8 @@ export default function Header() {
               href={link.href}
               className={`px-3 py-2 rounded-full text-sm xl:text-base transition-all duration-200 ${
                 pathname === link.href
-                  ? "bg-[#8A632D] text-white"
-                  : "hover:bg-[#8A632D] text-white hover:text-white"
+                  ? "bg-[#8f8c88] text-white"
+                  : "hover:bg-[#8f8c88] text-white hover:text-white"
               }`}
             >
               {link.name}
@@ -56,7 +56,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="bg-[#8A632D] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#8A632D] transition shadow-sm hover:shadow-md"
+            className="bg-[#8f8c88] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#030303] transition shadow-sm hover:shadow-md"
           >
             Book Now
           </Link>

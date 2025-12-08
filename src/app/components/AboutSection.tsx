@@ -64,7 +64,7 @@ export default function AboutSection() {
           >
             <Link
               href="/about"
-              className="inline-block bg-[#8A632D] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#060606] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#000000] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -106,7 +106,7 @@ OUR SERVICES          </span>
           >
             <Link
               href="/services"
-              className="inline-block bg-[#8A632D] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#040404] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#030303] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>

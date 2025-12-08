@@ -91,7 +91,7 @@ export default function AboutPage() {
                         </div>
                          <Link
               href="/catalogs"
-              className="inline-block bg-[#8A632D] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#050505] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#080808] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -117,13 +117,13 @@ export default function AboutPage() {
                             creativity, planning, and heartfelt execution.
                         </p>
 
-                        <p className="text-[#6b4b3a] text-lg leading-relaxed">
+                        <p className="text-[#2e2e2e] text-lg leading-relaxed">
                             From concept to completion, we ensure a seamless process, turning your dreams
                             into a reality that feels luxurious, effortless, and unforgettable.
                         </p>
                         <Link
               href="/contact"
-              className="inline-block bg-[#8A632D] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#050505] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#000000] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>

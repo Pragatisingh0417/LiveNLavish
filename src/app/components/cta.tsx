@@ -31,7 +31,7 @@ export default function CTA() {
           </p>
 
           <Link href="/contact">
-            <button className="bg-[#8A632D] text-gray-200 px-8 py-3 rounded-full font-medium hover:bg-[#000000] transition-all duration-300">
+            <button className="bg-[#040404] text-gray-200 px-8 py-3 rounded-full font-medium hover:bg-[#8f8c88] transition-all duration-300">
               Book An Appoinment
             </button>
           </Link>
