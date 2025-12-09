@@ -24,10 +24,10 @@ export default function Banner() {
   const getNextIndex = () => (activeIndex + 1) % slides.length;
 
   return (
-    <section className="relative flex flex-col items-center justify-center text-center bg-[#96928b] py-20 sm:py-28 lg:py-10 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center text-center bg-[#9691a6] py-20 sm:py-28 lg:py-10 overflow-hidden">
 
       {/* Soft Glow Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d] via-transparent to-[#f7f6f3] opacity-70 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#fefefe]  to-[#8e85a7] opacity-70 pointer-events-none" />
 
       {/* Floating Petals */}
       <motion.div

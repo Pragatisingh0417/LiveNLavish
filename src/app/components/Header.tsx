@@ -21,16 +21,16 @@ export default function Header() {
   ];
 
   return (
-    <header className=" top-0 left-0 w-full bg-[#060606] text-[#F4EFEA] shadow-md z-50">
+    <header className=" top-0 left-0 w-full bg-[#ffffff] text-[#F4EFEA] shadow-md z-50">
       <nav className="max-w-[1400px] mx-auto flex justify-between items-center px-4 sm:px-2 py-5 transition-all duration-300">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/todays-new.png"
+            src="/images/live n livsed logo-2.png"
             alt="livenlavishevents" 
             width={160}
-            height={60}
-            className=" w-full sm:w-[160px] md:w-[100px] h-auto"
+            height={50}
+            className=" w-full sm:w-[150px] md:w-[60px] h-auto"
             priority
           />
         </Link>
@@ -43,8 +43,8 @@ export default function Header() {
               href={link.href}
               className={`px-3 py-2 rounded-full text-sm xl:text-base transition-all duration-200 ${
                 pathname === link.href
-                  ? "bg-[#8f8c88] text-white"
-                  : "hover:bg-[#8f8c88] text-white hover:text-white"
+                  ? "bg-[#937dcf] text-white"
+                  : "hover:bg-[#937dcf] text-black hover:text-white"
               }`}
             >
               {link.name}
@@ -56,7 +56,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="bg-[#8f8c88] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#030303] transition shadow-sm hover:shadow-md"
+            className="bg-[#937dcf] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#ae9be1] transition shadow-sm hover:shadow-md"
           >
             Book Now
           </Link>

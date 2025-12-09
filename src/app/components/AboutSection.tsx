@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#9d9da0] py-16 sm:py-20 md:py-10 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-[#efeeef] via-[#fffdfb] to-[#9691a6] py-16 sm:py-20 md:py-10 overflow-hidden">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* LEFT IMAGE */}
@@ -23,7 +23,7 @@ export default function AboutSection() {
               alt="Elegant wedding couple"
               width={600}
               height={800}
-              className="w-full h-[500px] object-cover filter grayscale"
+              className="w-full h-[500px] object-cover"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -41,7 +41,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#030303] text-xs sm:text-sm font-semibold mb-3 inline-block">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#937dcf] text-xs sm:text-sm font-semibold mb-3 inline-block">
             Welcome to Live N Lavish Events, LLC
           </span>
 
@@ -64,7 +64,7 @@ export default function AboutSection() {
           >
             <Link
               href="/about"
-              className="inline-block bg-[#000000] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -84,7 +84,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#0b0b0b] text-xs sm:text-sm font-semibold mb-3 inline-block">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#937dcf] text-xs sm:text-sm font-semibold mb-3 inline-block">
 OUR SERVICES          </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#191919] mb-6 leading-tight">
@@ -106,7 +106,7 @@ OUR SERVICES          </span>
           >
             <Link
               href="/services"
-              className="inline-block bg-[#030303] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#8f8c88] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -127,7 +127,7 @@ OUR SERVICES          </span>
               alt="Elegant wedding couple"
               width={600}
               height={800}
-              className="w-full h-[500px] object-cover filter grayscale"
+              className="w-full h-[500px] object-cover "
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

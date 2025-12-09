@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Catalogs() {
   return (
-    <section className="relative bg-gradient-to-b from-[#a4a4a8] via-[#fffdfb] to-[#fffdfb] py-16 sm:py-20 md:py-10 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-[#a79fc1] via-[#fffdfb] to-[#a79fc1] py-16 sm:py-20 md:py-10 overflow-hidden">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* LEFT IMAGE */}
@@ -23,7 +23,7 @@ export default function Catalogs() {
               alt="Elegant wedding couple"
               width={600}
               height={800}
-              className="w-full h-[500px] object-cover filter grayscale"
+              className="w-full h-[500px] object-cover "
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -62,7 +62,7 @@ export default function Catalogs() {
           >
             <Link
               href="/catalogs"
-              className="inline-block bg-[#010101] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#7b7b7b] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9985d1] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -108,7 +108,7 @@ From my experience:           </p>
           >
             <Link
               href="/lavishBranding"
-              className="inline-block bg-[#050505] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#7b7b7b] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9382c2] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -129,7 +129,7 @@ From my experience:           </p>
               alt="Elegant wedding couple"
               width={600}
               height={800}
-              className="w-full h-[500px] object-cover filter grayscale"
+              className="w-full h-[500px] object-cover "
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
