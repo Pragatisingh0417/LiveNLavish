@@ -6,16 +6,16 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#939397] via-[#fffdfb] to-[#87878a] text-[#0e0e0e] pt-16 pb-6 border-t border-[#e6dccf]">
+    <footer className="bg-gradient-to-b from-[#bcb4d2] via-[#fffdfb] to-[#a196bf] text-[#0e0e0e] pt-16 pb-6 border-t border-[#e6dccf]">
       <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-4 gap-10">
 
         {/* Logo + About */}
         <div>
           <Image
-            src="/images/todays.png"
+            src="/images/live n livsed logo-2.png"
             alt="liveNlavish"
-            width={150}
-            height={80}
+            width={100}
+            height={30}
             className="mb-3"
           />
           <p className="text-sm leading-relaxed text-[#5a4732]">

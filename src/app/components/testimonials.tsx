@@ -16,7 +16,7 @@ export default function TestimonialSlider() {
   ];
 
   return (
-    <section className="py-10 bg-gradient-to-b from-[#d1cccc] via-[#fffdfb] to-[#fffdfb] relative overflow-hidden filter grayscale">
+    <section className="py-10 bg-gradient-to-b from-[#d1cccc] via-[#fffdfb] to-[#fffdfb] relative overflow-hidden ">
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center py-10">
