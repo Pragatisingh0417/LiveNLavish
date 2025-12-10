@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-4 gap-10">
 
         {/* Logo + About */}
-        <div>
+        <div className="">
           <Image
             src="/images/live n livsed logo-2.png"
             alt="liveNlavish"
@@ -18,7 +18,7 @@ export default function Footer() {
             height={30}
             className="mb-3"
           />
-          <p className="text-sm leading-relaxed text-[#5a4732]">
+          <p className="text-sm leading-relaxed text-[#0b0b0b] ">
            Live N Lavish Events, LLC is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
           </p>
 
@@ -70,7 +70,7 @@ export default function Footer() {
               <span className="font-medium">Phone:</span> 561-574-1246
             </li>
             <li>
-              <span className="font-medium">Email:</span> Hello@livenlavishevents.com
+              <span className="font-medium">Email:</span> hello@livenlavishevents.com
             </li>
             <li>
               <span className="font-medium">Location:</span> Live N Lavish Events
@@ -83,21 +83,21 @@ export default function Footer() {
             alt="celebration"
             width={600}
             height={800}
-            className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+            className="w-[100px] h-[100px] object-cover rounded-xl "
           />
             <Image
               src="/images/lavish-6.png"
               alt="celebration"
               width={600}
               height={800}
-              className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+              className="w-[100px] h-[100px] object-cover rounded-xl "
             /> 
             <Image
               src="/images/lavish-7.png"
               alt="celebration"
               width={600}
               height={800}
-              className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+              className="w-[100px] h-[100px] object-cover rounded-xl"
             />
 
             
@@ -108,21 +108,21 @@ export default function Footer() {
             alt="celebration"
             width={600}
             height={800}
-            className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+            className="w-[100px] h-[100px] object-cover rounded-xl "
           />
             <Image
               src="/images/shop-1.jpeg"
               alt="celebration"
               width={600}
               height={800}
-              className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+              className="w-[100px] h-[100px] object-cover rounded-xl "
             /> 
             <Image
               src="/images/shop-4.jpeg"
               alt="celebration"
               width={600}
               height={800}
-              className="w-[100px] h-[100px] object-cover rounded-xl filter grayscale"
+              className="w-[100px] h-[100px] object-cover rounded-xl"
             />
 
             

@@ -30,7 +30,7 @@ export default function Header() {
             alt="livenlavishevents" 
             width={160}
             height={50}
-            className=" w-full sm:w-[150px] md:w-[60px] h-auto"
+className="w-[90px] sm:w-[130px] md:w-[70px] h-auto"
             priority
           />
         </Link>
