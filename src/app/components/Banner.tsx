@@ -11,8 +11,8 @@ import { useState } from "react";
 export default function Banner() {
   const slides = [
     "/images/DancingOnTheClouds1.png",
-    "/images/home20-slider_1.jpeg",
-    "/images/home20-slider_2.jpeg",
+    "/images/image-2.jpeg",
+    "/images/image-4.jpeg",
     "/images/lavish-13.png",
     "/images/lavish-6.png",
     "/images/lavish-7.png",
@@ -27,7 +27,7 @@ export default function Banner() {
     <section className="relative flex flex-col items-center justify-center text-center bg-[#9691a6] py-20 sm:py-28 lg:py-10 overflow-hidden">
 
       {/* Soft Glow Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#fefefe]  to-[#8e85a7] opacity-70 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#fefefe]  to-[#eae3f9] opacity-70 pointer-events-none" />
 
       {/* Floating Petals */}
       <motion.div
@@ -53,10 +53,10 @@ export default function Banner() {
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
         className="text-2xl tracking-normal sm:text-4xl sm:tracking-widest md:text-5xl lg:text-6xl 
-        font-serif mb-5 px-4 bg-gradient-to-r from-[#0a0a0a] via-[#1b1b1a] to-[#0a0a0a] 
+        font-serif mt-10 mb-5 px-4 bg-gradient-to-r from-[#0a0a0a] via-[#1b1b1a] to-[#0a0a0a] 
         text-transparent bg-clip-text drop-shadow"
       >
-        LIVE · N · LAVISH · EVENTS
+        {/* LIVE · N · LAVISH · EVENTS */}
       </motion.h1>
 
       {/* Slider Wrapper */}

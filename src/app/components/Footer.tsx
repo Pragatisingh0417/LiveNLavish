@@ -135,7 +135,7 @@ export default function Footer() {
 
 
       {/* Bottom Section */}
-      <div className="text-center text-sm text-[#6d5a45] mt-10 pt-4 border-t border-[#a8a29b]">
+      <div className="text-center text-sm text-[#000000] mt-10 pt-4 border-t border-[#a8a29b]">
         © {new Date().getFullYear()} **livenlavishevents** — All Rights Reserved.
       </div>
     </footer>

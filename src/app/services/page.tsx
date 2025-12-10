@@ -154,9 +154,9 @@ export default function ServicesPage() {
       </div>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-[#fffaf3] relative overflow-hidden">
+      <section className="py-20 bg-[#eae3f9] relative overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff2d7] via-transparent to-[#fffaf3] opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#eae3f9] via-transparent to-[#f7f6fa] opacity-60"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
 
