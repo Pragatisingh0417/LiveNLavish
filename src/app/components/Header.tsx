@@ -18,9 +18,11 @@ export default function Header() {
   ];
 
   const rightLinks = [
-    { name: "My Brand", href: "/lavishBranding" },
+    { name: " Brand", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
     { name: "Contact", href: "/contact" },
+        { name: "Blog", href: "/blogs" },
+
   ];
 
   return (
@@ -45,14 +47,14 @@ export default function Header() {
         </div>
 
         {/* ---------- CENTER LOGO (DESKTOP) ---------- */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 mt-5">
           <Link href="/">
             <Image
-              src="/images/live n livsed logo-2.png"
+              src="/main-logo2.png"
               alt="livenlavishevents"
               width={140}
               height={50}
-              className="h-auto w-[100px]"
+              className="h-auto w-[200px]"
               priority
             />
           </Link>
@@ -62,7 +64,7 @@ export default function Header() {
         <div className="lg:hidden">
           <Link href="/">
             <Image
-              src="/images/live n livsed logo-2.png"
+              src="/main-logo2.png"
               alt="livenlavishevents"
               width={120}
               height={40}
@@ -73,7 +75,7 @@ export default function Header() {
         </div>
 
         {/* ---------- RIGHT DESKTOP MENU ---------- */}
-        <div className="hidden lg:flex items-center space-x-6 ml-auto">
+        <div className="hidden lg:flex items-center space-x-4 ml-auto">
           {rightLinks.map((link) => (
             <Link
               key={link.href}

@@ -12,11 +12,11 @@ export default function Footer() {
         {/* Logo + About */}
         <div className="">
           <Image
-            src="/images/live n livsed logo-2.png"
+            src="/main-logo2.png"
             alt="liveNlavish"
-            width={100}
+            width={200}
             height={30}
-            className="mb-3"
+            className=""
           />
           <p className="text-sm leading-relaxed text-[#0b0b0b] ">
            Live N Lavish Events, LLC is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
