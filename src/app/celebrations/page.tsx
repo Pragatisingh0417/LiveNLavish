@@ -5,7 +5,7 @@ import TestimonialSlider from "../components/testimonials";
 
 export default function CelebrationsPage() {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#f7f6fa] via-[#eae3f9] to-[#e5def5]">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         
         {/* Heading */}

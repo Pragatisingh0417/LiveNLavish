@@ -16,11 +16,11 @@ export default function TestimonialSlider() {
   ];
 
   return (
-    <section className="py-10 bg-gradient-to-b from-[#f7f6fa] via-[#eae3f9] to-[#e5def5] relative overflow-hidden ">
+    <section className="py-10 bg-white relative overflow-hidden ">
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center py-10">
-        <h2 className="text-4xl  sm:text-5xl font-bold text-[#211e59] text-center mb-10">
+        <h2 className="text-4xl  sm:text-5xl font-bold text-[#000000] text-center mb-10">
           What Our Couples Say
         </h2>
 

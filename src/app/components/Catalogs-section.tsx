@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 
 export default function Catalogs() {
   return (
-    <section className="relative bg-gradient-to-b from-[#a79fc1] via-[#fffdfb] to-[#a79fc1] py-16 sm:py-20 md:py-10 overflow-hidden">
+    <section className="relative 
+ py-16 sm:py-20 md:py-10 overflow-hidden">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* LEFT IMAGE */}
@@ -41,17 +42,23 @@ export default function Catalogs() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          
 
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light text-[#191919] mb-6 leading-tight">
-            CATALOGS OF LNL EVENTS
+
+          <span className="uppercase tracking-[5px] text-[#ad8130] text-xs font-semibold">
+            Our Collection
+          </span>
+
+          <h2 className="text-4xl lg:text-5xl font-light text-[#ad8130] mb-6">
+            LNL Event Catalogs
           </h2>
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-5 text-[0.95rem] sm:text-[1.05rem]">
+
+
+          <p className="text-white leading-relaxed mb-5 text-[0.95rem] sm:text-[1.05rem]">
             <strong className="text-[#7b7b7b]">Live N Lavish Events, LLC</strong> is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
           </p>
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-8 sm:mb-10 text-[0.95rem] sm:text-[1.05rem]">
+          <p className="text-white leading-relaxed mb-8 sm:mb-10 text-[0.95rem] sm:text-[1.05rem]">
             We produce stunning, all-inclusive weddings & special events that captivates diverse audiences.
           </p>
 
@@ -62,7 +69,7 @@ export default function Catalogs() {
           >
             <Link
               href="/catalogs"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9985d1] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -70,11 +77,13 @@ export default function Catalogs() {
         </motion.div>
       </div>
 
-{/* new */}
+      {/* new */}
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto my-16 h-px bg-white/20" />
 
-<div className="max-w-[1300px] mx-auto px-4 py-10 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <div className="max-w-[1300px] mx-auto px-4 py-10 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
-  {/* left CONTENT */}
+        {/* left CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -82,22 +91,24 @@ export default function Catalogs() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#000000] text-xs sm:text-sm font-semibold mb-3 inline-block">
-               LNL BRANDS ENHANCEMENT
-      </span>
+          <span className="uppercase tracking-[5px] text-white text-xs font-semibold">
+            LNL Brand Enhancement
+          </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#191919] mb-6 leading-tight">
-Enhance My Brand            </h2>
+          <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
+            Enhance Your Brand
+          </h2>
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-5 text-[0.95rem] sm:text-[1.05rem]">
-            <strong className="text-[#7b7b7b]"> In Live N Lavish Events, LLC </strong>
-I help wedding planners, event designers and female entrepreneurs generate more quality leads and earn up to 10x their current revenue through my TAQ system and automatic technology!
 
-I’m a woman who dreams big, takes action and helps others do the same.
+          <p className="text-white leading-relaxed mb-5 text-[0.95rem] sm:text-[1.05rem]">
+            <strong className="text-[#ad8130]"> In Live N Lavish Events, LLC </strong>
+            I help wedding planners, event designers and female entrepreneurs generate more quality leads and earn up to 10x their current revenue through my TAQ system and automatic technology!
 
-From my experience:           </p>
+            I’m a woman who dreams big, takes action and helps others do the same.
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-8 sm:mb-10 text-[0.95rem] sm:text-[1.05rem]">
+            From my experience:           </p>
+
+          <p className="text-white leading-relaxed mb-8 sm:mb-10 text-[0.95rem] sm:text-[1.05rem]">
             We produce stunning, all-inclusive weddings & special events that captivates diverse audiences.
           </p>
 
@@ -108,7 +119,7 @@ From my experience:           </p>
           >
             <Link
               href="/lavishBranding"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9382c2] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -139,7 +150,7 @@ From my experience:           </p>
           <div className="absolute -inset-1 bg-gradient-to-r from-[#B98B4E]/30 to-transparent rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-700" />
         </motion.div>
 
-        
+
       </div>
 
     </section>

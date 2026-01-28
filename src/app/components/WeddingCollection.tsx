@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function WeddingCollection() {
   return (
-    <section className="w-full py-20 px-6 lg:px-20 bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#a79fc1]">
+    <section className="w-full py-20 px-6 lg:px-20 bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#bba783]">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
 
         {/* LEFT TEXT (col-1) */}
         <div className="flex flex-col justify-start">
-          <p className="text-sm tracking-wide text-[#937dcf] mb-4">
+          <p className="text-sm tracking-wide text-[#cfb45e] mb-4">
             Your Forever Begins Here
           </p>
 
@@ -88,7 +88,7 @@ Complete form to receive a customized quote from us            </p>
 
             <Link
               href="/contact"
-              className="bg-[#937dcf] text-white px-7 py-3 rounded-full text-sm font-medium"
+              className="bg-[#cfb45e] text-white px-7 py-3 rounded-full text-sm font-medium"
             >
               Request A Call Back
             </Link>

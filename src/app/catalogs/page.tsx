@@ -74,7 +74,7 @@ export default function Catalogs() {
                 <div className="rounded-3xl overflow-hidden bg-white shadow-xl border border-gray-200 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
                   
                   {/* Image */}
-                  <div className="h-56 w-full overflow-hidden">
+<div className="h-[340px] w-full overflow-hidden">
                     <Image
                       src={cat.img}
                       alt={cat.name}

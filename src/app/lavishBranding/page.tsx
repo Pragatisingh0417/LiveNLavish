@@ -160,7 +160,7 @@ export default function LavishBrandingWorkshop() {
               transition={{ duration: 0.6, delay: index * 0.05 }}
               className="p-6 bg-white/75 text-black border border-white/30 rounded-2xl shadow-sm flex items-start gap-4"
             >
-              <div className="flex-shrink-0 mt-1 text-[#937dcf] text-xl">✦</div>
+              <div className="flex-shrink-0 mt-1 text-[#cfb45e] text-xl">✦</div>
               <div className="text-sm leading-relaxed">{text}</div>
             </motion.div>
           ))}
@@ -252,11 +252,11 @@ export default function LavishBrandingWorkshop() {
 
           {/* CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-[#937dcf] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#a290d4] transition">
+            <button className="bg-[#cfb45e] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#bea142] transition">
               Request Quote
             </button>
 
-            <button className="border border-[#937dcf] text-[#000000] px-8 py-4 rounded-xl text-lg hover:bg-[#937dcf] hover:text-white transition">
+            <button className="border border-[#cfb45e] text-[#000000] px-8 py-4 rounded-xl text-lg hover:bg-[#cfb45e] hover:text-white transition">
               Schedule Strategy Session
             </button>
           </div>

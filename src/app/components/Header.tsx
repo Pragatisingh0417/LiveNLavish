@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -9,137 +10,145 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Split menu into left and right groups
   const leftLinks = [
     { name: "Home", href: "/" },
-    { name: "About us", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Celebrations", href: "/celebrations" },
     { name: "Services", href: "/services" },
   ];
 
   const rightLinks = [
-    { name: " Brand", href: "/lavishBranding" },
+    { name: "My Brands", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
-    { name: "Contact", href: "/contact" },
-        { name: "Blog", href: "/blogs" },
+        { name: "Blogs", href: "/blogs" },
 
+    { name: "Contact Us", href: "/contact" },
   ];
 
+  const linkClass = (href: string) =>
+    `relative text-[15px] tracking-wide transition ${
+      pathname === href
+        ? "text-[#bfa34a] after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-full after:bg-[#bfa34a]"
+        : "text-black hover:text-[#bfa34a]"
+    }`;
+
   return (
-    <header className="top-0 w-full bg-white shadow-md z-50">
-      <nav className="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-5 relative">
+    <>
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#f3f2f0]/95 backdrop-blur-md border-b border-black/10">
+        <nav className="max-w-[1400px] mx-auto px-10 h-[72px] flex items-center">
 
-        {/* ---------- LEFT DESKTOP MENU ---------- */}
-        <div className="hidden lg:flex items-center space-x-6">
-          {leftLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`px-3 py-2 rounded-full text-sm transition ${
-                pathname === link.href
-                  ? "bg-[#937dcf] text-white font-semibold text-[18px]"
-                  : "hover:bg-[#937dcf] text-black font-semibold hover:text-white text-[18px]"
-              }`}
-            >
-              {link.name}
+          {/* ================= DESKTOP ================= */}
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto] items-center w-full">
+
+            {/* LEFT MENU */}
+            <div className="flex justify-end gap-7 pr-8">
+              {leftLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={linkClass(link.href)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* LOGO */}
+            <div className="flex justify-center">
+              <Link href="/">
+                <Image
+                  src="/main-logo2.png"
+                  alt="Live N Lavish Events"
+                  width={155}
+                  height={42}
+                  priority
+                />
+              </Link>
+            </div>
+
+            {/* RIGHT MENU */}
+            <div className="flex justify-start gap-7 pl-8 whitespace-nowrap">
+              {rightLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={linkClass(link.href)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="pl-6">
+              <Link
+                href="/contact"
+                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a] text-[#bfa34a]
+                           hover:bg-[#bfa34a] hover:text-white transition whitespace-nowrap"
+              >
+                BOOK NOW
+              </Link>
+            </div>
+          </div>
+
+          {/* ================= MOBILE ================= */}
+          <div className="lg:hidden flex justify-between items-center w-full">
+            <Link href="/">
+              <Image
+                src="/main-logo2.png"
+                alt="Live N Lavish Events"
+                width={130}
+                height={36}
+                priority
+              />
             </Link>
-          ))}
-        </div>
 
-        {/* ---------- CENTER LOGO (DESKTOP) ---------- */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 mt-5">
-          <Link href="/">
-            <Image
-              src="/main-logo2.png"
-              alt="livenlavishevents"
-              width={140}
-              height={50}
-              className="h-auto w-[200px]"
-              priority
-            />
-          </Link>
-        </div>
-
-        {/* ---------- MOBILE LOGO ---------- */}
-        <div className="lg:hidden">
-          <Link href="/">
-            <Image
-              src="/main-logo2.png"
-              alt="livenlavishevents"
-              width={120}
-              height={40}
-              className="h-auto"
-              priority
-            />
-          </Link>
-        </div>
-
-        {/* ---------- RIGHT DESKTOP MENU ---------- */}
-        <div className="hidden lg:flex items-center space-x-4 ml-auto">
-          {rightLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`px-3 py-2 rounded-full text-sm transition ${
-                pathname === link.href
-                  ? "bg-[#937dcf] text-white font-semibold text-[18px]"
-                  : "hover:bg-[#937dcf] text-black hover:text-white font-semibold text-[18px]"
-              }`}
+            <button
+              className="text-2xl p-2 border border-black/30 rounded-sm"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              {link.name}
-            </Link>
-          ))}
+              {menuOpen ? <FiX /> : <FiMenu />}
+            </button>
+          </div>
+        </nav>
 
-          {/* BOOK NOW BUTTON */}
-          <Link
-            href="/contact"
-            className="bg-[#937dcf] text-white px-4 py-2 rounded-full font-semibold transition hover:bg-[#9886c8]"
-          >
-            Book Now
-          </Link>
-        </div>
-
-        {/* ---------- MOBILE MENU BUTTON ---------- */}
-        <button
-          className="lg:hidden text-3xl p-2 bg-black text-white rounded-md ml-auto"
-          onClick={() => setMenuOpen(!menuOpen)}
+        {/* MOBILE MENU */}
+        <div
+          className={`lg:hidden bg-[#f3f2f0] border-t border-black/10 transition-all duration-300 overflow-hidden ${
+            menuOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
-          {menuOpen ? <FiX /> : <FiMenu />}
-        </button>
-      </nav>
+          <div className="flex flex-col px-8 py-6 space-y-5">
+            {[...leftLinks, ...rightLinks].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`text-[15px] tracking-wide ${
+                  pathname === link.href
+                    ? "text-[#bfa34a]"
+                    : "text-black hover:text-[#bfa34a]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
 
-      {/* ---------- MOBILE MENU ---------- */}
-      <div
-        className={`lg:hidden bg-[#F4EFEA] text-black transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="flex flex-col px-6 py-4 space-y-3">
-          {[...leftLinks, ...rightLinks].map((link) => (
             <Link
-              key={link.href}
-              href={link.href}
+              href="/contact"
               onClick={() => setMenuOpen(false)}
-              className={`block px-3 py-2 rounded-md transition ${
-                pathname === link.href
-                  ? "bg-black text-white"
-                  : "hover:bg-black hover:text-white"
-              }`}
+              className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
+                         px-6 py-2 text-center tracking-wider"
             >
-              {link.name}
+              BOOK NOW
             </Link>
-          ))}
-
-          {/* MOBILE BOOK NOW BUTTON */}
-          <Link
-            href="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="bg-black text-white px-4 py-2 rounded-full text-center"
-          >
-            Book Now
-          </Link>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* PAGE OFFSET */}
+      <div className="h-[72px]" />
+    </>
   );
 }

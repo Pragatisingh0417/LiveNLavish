@@ -111,14 +111,14 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl font-bold text-center text-[#211e59] mb-12"
+          className="text-4xl sm:text-5xl font-bold text-center text-[#000000] mb-12"
         >
           Our Services
         </motion.h2>
 
         <p className="text-center text-gray-700 max-w-2xl mx-auto mb-16 text-lg">
           We offer <strong>full-service wedding planning & in-house decor solutions</strong>.
-          Our team creates unforgettable experiences — from intimate 2-guest ceremonies  
+          Our team creates unforgettable experiences — from intimate 2-guest ceremonies
           to luxury 500+ guest celebrations.
         </p>
 
@@ -154,36 +154,58 @@ export default function ServicesPage() {
       </div>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-[#eae3f9] relative overflow-hidden">
+     {/* WHY CHOOSE US */}
+<section className="relative py-24 bg-black overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#eae3f9] via-transparent to-[#f7f6fa] opacity-60"></div>
+  {/* subtle gold glow */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#ad8130]/10 via-transparent to-transparent" />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-4xl md:text-5xl font-serif text-center text-[#b8846b] mb-12"
-          >
-            Why Choose Us
-          </motion.h2>
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-4xl md:text-5xl font-serif text-center text-[#ad8130] mb-16 tracking-wide"
+    >
+      Why Choose Us
+    </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {points.map((text, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 bg-white/60 backdrop-blur-xl border border-white/40 rounded-2xl shadow-lg text-lg text-[#6b4b3a]"
-              >
-                ✦ {text}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-2 gap-10">
+
+      {points.map((text, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: i * 0.1 }}
+          viewport={{ once: true }}
+          className="
+            relative p-8
+            bg-white/80 backdrop-blur-xl
+            border border-[#ad8130]/20
+            rounded-3xl
+            shadow-[0_20px_60px_rgba(0,0,0,0.15)]
+            text-lg text-[#6b4b3a]
+            hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,0,0,0.25)]
+            transition-all duration-500
+          "
+        >
+          <span className="absolute top-4 right-6 text-[#ad8130]/30 text-5xl font-serif">
+            ✦
+          </span>
+
+          <p className="relative z-10 leading-relaxed">
+            {text}
+          </p>
+        </motion.div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
 
       <TestimonialSlider />
     </section>

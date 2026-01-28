@@ -6,8 +6,8 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#bcb4d2] via-[#fffdfb] to-[#a196bf] text-[#0e0e0e] pt-16 pb-6 border-t border-[#e6dccf]">
-      <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-4 gap-10">
+    <footer className="bg-amber-50 text-[#0e0e0e] pt-16 pb-6">
+      <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-4 gap-14">
 
         {/* Logo + About */}
         <div className="">
@@ -136,7 +136,7 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="text-center text-sm text-[#000000] mt-10 pt-4 border-t border-[#a8a29b]">
-        © {new Date().getFullYear()} **livenlavishevents** — All Rights Reserved.
+        © {new Date().getFullYear()} livenlavishevents — All Rights Reserved.  Made by <a href="https://gemwebservices.com/" target="blank" className="font-bold"> GEM WEB SERVICES </a>
       </div>
     </footer>
   );

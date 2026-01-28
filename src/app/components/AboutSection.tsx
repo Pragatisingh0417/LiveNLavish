@@ -41,7 +41,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#937dcf] text-xs sm:text-sm font-semibold mb-3 inline-block">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#cfb45e] text-xs sm:text-sm font-semibold mb-3 inline-block">
             Welcome to Live N Lavish Events, LLC
           </span>
 
@@ -64,7 +64,7 @@ export default function AboutSection() {
           >
             <Link
               href="/about"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -84,7 +84,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#937dcf] text-xs sm:text-sm font-semibold mb-3 inline-block">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#cfb45e] text-xs sm:text-sm font-semibold mb-3 inline-block">
 OUR SERVICES          </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#191919] mb-6 leading-tight">
@@ -106,7 +106,7 @@ OUR SERVICES          </span>
           >
             <Link
               href="/services"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a191cd] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>

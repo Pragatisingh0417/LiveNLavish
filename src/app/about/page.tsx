@@ -11,7 +11,7 @@ export default function AboutPage() {
         <section className="bg-[#fffaf3] overflow-hidden relative">
 
             {/* Soft Background Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#D3D3FF] via-transparent to-[#D3D3FF] opacity-60" />
+            <div className="absolute inset-0 bg-white opacity-60" />
 
             <div className="relative max-w-7xl mx-auto px-6 md:px-10 pb-20">
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
                         </h2>
 
                         <p className="text-[#201f1f] text-lg leading-relaxed">
-                            <span className="font-semibold text-[#937dcf]">Live N Lavish Events , LLC —</span>,
+                            <span className="font-semibold text-[#cfb45e]">Live N Lavish Events , LLC —</span>,
                             is a full service Wedding & Event Management company that provides Wedding Planning,
                             Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals,
                             Live Entertainment, Lighting Services and more to Palm Beach County, Florida, Dade County,
@@ -91,7 +91,7 @@ export default function AboutPage() {
                         </div>
                          <Link
               href="/catalogs"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a494d0] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a494d0] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                         </p>
                         <Link
               href="/contact"
-              className="inline-block bg-[#937dcf] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9e8cd1] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9e8cd1] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>

@@ -8,12 +8,15 @@ import Testimonials from "./components/testimonials";
 import OfferSection from "./components/OfferSection";
 import FAQ from "./components/FAQ";
 import Catalogs from "./components/Catalogs-section";
+import AboutBlock from "./components/AboutBlock";
+import ServicesBlock from "./components/ServicesBlock";
 
 export default function Home() {
   return (
     <>
     <Banner />
-    <AboutSection />
+    <AboutBlock />
+    <ServicesBlock />
     <WeddingCollection />
     <CTA />
     <ShopCategories />
