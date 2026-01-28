@@ -10,7 +10,7 @@ export default function WeddingCollection() {
 
         {/* LEFT TEXT (col-1) */}
         <div className="flex flex-col justify-start">
-          <p className="text-sm tracking-wide text-[#cfb45e] mb-4">
+          <p className="text-sm tracking-wide text-[#ad8130] mb-4">
             Your Forever Begins Here
           </p>
 
@@ -88,7 +88,7 @@ Complete form to receive a customized quote from us            </p>
 
             <Link
               href="/contact"
-              className="bg-[#cfb45e] text-white px-7 py-3 rounded-full text-sm font-medium"
+              className="bg-[#ad8130] text-white px-7 py-3 rounded-full text-sm font-medium"
             >
               Request A Call Back
             </Link>

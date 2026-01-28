@@ -5,14 +5,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const categories = [
-  { name: "Table Linens", slug: "/table-linens", img: "/images/shop-2.jpeg" },
-  { name: "Candelabras", slug: "/candelabras", img: "/images/shop-3.jpeg" },
-  { name: "Vases", slug: "/vases", img: "/images/shop-4.jpeg" },
-  { name: "Custom Backdrops", slug: "/custom-backdrops", img: "/images/shop-5.jpeg" },
-  { name: "Venue Drapery", slug: "/venue-drapery", img: "/images/shop-7.png" },
-  { name: "Ceiling Drapery", slug: "/ceiling-drapery", img: "/images/shop-7.png" },
-  { name: "Chair Rentals", slug: "/chair-rentals", img: "/images/shop-2.jpeg" },
-  { name: "Flower Arrangements", slug: "/flower-arrangements", img: "/images/shop-1.jpeg" },
+  { name: "Table Linens", slug: "catalogs/table-linens", img: "/images/shop-2.jpeg" },
+  { name: "Candelabras", slug: "catalogs/candelabras", img: "/images/shop-3.jpeg" },
+  { name: "Vases", slug: "catalogs/vases", img: "/images/shop-4.jpeg" },
+  { name: "Custom Backdrops", slug: "catalogs/custom-backdrops", img: "/images/shop-5.jpeg" },
+  { name: "Venue Drapery", slug: "catalogs/venue-drapery", img: "/images/shop-7.png" },
+  { name: "Ceiling Drapery", slug: "catalogs/ceiling-drapery", img: "/images/shop-7.png" },
+  { name: "Chair Rentals", slug: "catalogs/chair-rentals", img: "/images/shop-2.jpeg" },
+  { name: "Flower Arrangements", slug: "catalogs/flower-arrangements", img: "/images/shop-1.jpeg" },
 ];
 
 // Animation Variants

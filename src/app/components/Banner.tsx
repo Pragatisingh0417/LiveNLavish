@@ -10,7 +10,7 @@ import "swiper/css/effect-fade";
 export default function Banner() {
   const slides = [
     {
-      image: "/images/DancingOnTheClouds1.png",
+      image: "/images/home20-slider_2.jpeg",
       title: "Luxury Wedding Experiences",
       subtitle: "Where elegance meets unforgettable moments",
       cta: "Explore Our Events",
@@ -22,7 +22,7 @@ export default function Banner() {
       cta: "View Our Work",
     },
     {
-      image: "/images/image-4.jpeg",
+      image: "/images/home20-slider_1.jpeg",
       title: "Celebrate In Style",
       subtitle: "Bespoke celebrations that feel timeless",
       cta: "Plan Your Event",
@@ -75,7 +75,7 @@ export default function Banner() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     className="
-                      font-serif text-[#cfb45e]
+                      font-serif text-[#ad8130]
                       text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
                       leading-tight mb-4 sm:mb-6
                     "
@@ -104,11 +104,11 @@ export default function Banner() {
                     transition={{ delay: 0.6, duration: 0.8 }}
                     className="
                       inline-block
-                      border-2 border-[#cfb45e]
-                      text-[#cfb45e]
+                      border-2 border-[#ad8130]
+                      text-[#ad8130]
                       px-7 sm:px-8 py-3 sm:py-4
                       uppercase tracking-widest text-xs sm:text-sm
-                      hover:bg-[#cfb45e] hover:text-black
+                      hover:bg-[#ad8130] hover:text-black
                       transition-all duration-300
                     "
                   >

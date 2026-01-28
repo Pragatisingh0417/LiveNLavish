@@ -20,7 +20,7 @@ export default function Header() {
   const rightLinks = [
     { name: "My Brands", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
-        { name: "Blogs", href: "/blogs" },
+        { name: "Blogs", href: "/blogs/meet-lekita-logan-range" },
 
     { name: "Contact Us", href: "/contact" },
   ];

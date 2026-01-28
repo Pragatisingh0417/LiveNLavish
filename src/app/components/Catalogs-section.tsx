@@ -69,7 +69,7 @@ export default function Catalogs() {
           >
             <Link
               href="/catalogs"
-              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>
@@ -119,7 +119,7 @@ export default function Catalogs() {
           >
             <Link
               href="/lavishBranding"
-              className="inline-block bg-[#cfb45e] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
+              className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
             >
               Learn More
             </Link>

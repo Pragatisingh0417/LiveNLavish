@@ -10,14 +10,19 @@ import FAQ from "./components/FAQ";
 import Catalogs from "./components/Catalogs-section";
 import AboutBlock from "./components/AboutBlock";
 import ServicesBlock from "./components/ServicesBlock";
+import HomeHeroVideo from "./components/HomeHeroVideo";
+import HomeShowcaseGrid from "./components/HomeShowcaseGrid";
 
 export default function Home() {
   return (
     <>
     <Banner />
     <AboutBlock />
+
     <ServicesBlock />
-    <WeddingCollection />
+            <HomeHeroVideo />
+    <HomeShowcaseGrid />
+
     <CTA />
     <ShopCategories />
     <Catalogs />
