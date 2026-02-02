@@ -60,7 +60,7 @@ export default function Banner() {
               </motion.div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/65" />
+              <div className="absolute inset-0 bg-black/35" />
 
               {/* Content */}
               <div className="relative z-10 flex items-center h-full">
@@ -75,7 +75,7 @@ export default function Banner() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     className="
-                      font-serif text-[#ad8130]
+                      font-serif text-[#ffffff]
                       text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
                       leading-tight mb-4 sm:mb-6
                     "
@@ -105,7 +105,7 @@ export default function Banner() {
                     className="
                       inline-block
                       border-2 border-[#ad8130]
-                      text-[#ad8130]
+                      text-white
                       px-7 sm:px-8 py-3 sm:py-4
                       uppercase tracking-widest text-xs sm:text-sm
                       hover:bg-[#ad8130] hover:text-black

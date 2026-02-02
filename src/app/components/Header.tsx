@@ -18,18 +18,21 @@ export default function Header() {
   ];
 
   const rightLinks = [
-    { name: "My Brands", href: "/lavishBranding" },
+    { name: " Enhance My Brands", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
-        { name: "Blogs", href: "/blogs/meet-lekita-logan-range" },
+    { name: "Blogs", href: "/blogs/meet-lekita-logan-range" },
 
     { name: "Contact Us", href: "/contact" },
   ];
+  const enhanceDropdown = [
+    { name: "Lavish Branding Workshop", href: "/lavish-branding-workshop" },
+    { name: "City Entertainment Guide", href: "/city-entertainment-guide" },
+  ];
 
   const linkClass = (href: string) =>
-    `relative text-[15px] tracking-wide transition ${
-      pathname === href
-        ? "text-[#bfa34a] after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-full after:bg-[#bfa34a]"
-        : "text-black hover:text-[#bfa34a]"
+    `relative text-[15px] tracking-wide transition ${pathname === href
+      ? "text-[#bfa34a] after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-full after:bg-[#bfa34a]"
+      : "text-black hover:text-[#bfa34a]"
     }`;
 
   return (
@@ -68,17 +71,41 @@ export default function Header() {
             </div>
 
             {/* RIGHT MENU */}
-            <div className="flex justify-start gap-7 pl-8 whitespace-nowrap">
-              {rightLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={linkClass(link.href)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex justify-start gap-7 pl-8 whitespace-nowrap items-center">
+
+              {/* Enhance My Brands Dropdown */}
+              <div className="relative group">
+                <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
+                  Enhance My Brands
+                </span>
+
+                <div className="absolute left-0 top-full mt-3 w-56 bg-white border border-black/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {enhanceDropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-5 py-3 text-[14px] text-black hover:bg-[#f3f2f0] hover:text-[#bfa34a]"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Rest Right Links */}
+              {rightLinks
+                .filter((l) => l.name !== " Enhance My Brands")
+                .map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={linkClass(link.href)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
             </div>
+
 
             {/* CTA */}
             <div className="pl-6">
@@ -115,9 +142,8 @@ export default function Header() {
 
         {/* MOBILE MENU */}
         <div
-          className={`lg:hidden bg-[#f3f2f0] border-t border-black/10 transition-all duration-300 overflow-hidden ${
-            menuOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`lg:hidden bg-[#f3f2f0] border-t border-black/10 transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="flex flex-col px-8 py-6 space-y-5">
             {[...leftLinks, ...rightLinks].map((link) => (
@@ -125,11 +151,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-[15px] tracking-wide ${
-                  pathname === link.href
+                className={`text-[15px] tracking-wide ${pathname === link.href
                     ? "text-[#bfa34a]"
                     : "text-black hover:text-[#bfa34a]"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
