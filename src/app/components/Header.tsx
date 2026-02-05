@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -12,7 +12,7 @@ export default function Header() {
 
   const leftLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: "About", href: "/about" },
     { name: "Celebrations", href: "/celebrations" },
     { name: "Services", href: "/services" },
   ];
@@ -29,17 +29,39 @@ export default function Header() {
     { name: "City Entertainment Guide", href: "/city-entertainment-guide" },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const linkClass = (href: string) =>
-    `relative text-[15px] tracking-wide transition ${pathname === href
-      ? "text-[#bfa34a] after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-full after:bg-[#bfa34a]"
-      : "text-black hover:text-[#bfa34a]"
-    }`;
+  `relative text-[15px] tracking-wide transition-all duration-200
+  ${
+    pathname === href
+      ? "text-[#bfa34a]"
+      : scrolled
+        ? "text-black hover:text-[#bfa34a]"
+        : "text-white hover:text-[#bfa34a]"
+  }
+  after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:bg-[#bfa34a]
+  after:w-0 hover:after:w-full after:transition-all after:duration-300`;
+
+
 
   return (
     <>
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#f3f2f0]/95 backdrop-blur-md border-b border-black/10">
-        <nav className="max-w-[1400px] mx-auto px-10 h-[72px] flex items-center">
+<header
+  className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300
+    ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}
+  `}
+>
+        <nav className="max-w-[1400px] mx-auto px-10 h-[100px] flex items-center">
 
           {/* ================= DESKTOP ================= */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto] items-center w-full">
@@ -58,17 +80,19 @@ export default function Header() {
             </div>
 
             {/* LOGO */}
-            <div className="flex justify-center">
-              <Link href="/">
-                <Image
-                  src="/main-logo2.png"
-                  alt="Live N Lavish Events"
-                  width={155}
-                  height={42}
-                  priority
-                />
-              </Link>
-            </div>
+            <Image
+  src={
+    scrolled
+      ? "/main-logo2.png"                 
+      : "/live n lavish logo white .png" 
+  }
+  alt="Live N Lavish Events"
+  width={155}
+  height={100}
+  priority
+  className="h-[130px] w-auto object-contain transition-all duration-300"
+/>
+
 
             {/* RIGHT MENU */}
             <div className="flex justify-start gap-7 pl-8 whitespace-nowrap items-center">
@@ -79,12 +103,16 @@ export default function Header() {
                   Enhance My Brands
                 </span>
 
-                <div className="absolute left-0 top-full mt-3 w-56 bg-white border border-black/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="absolute left-0 top-full mt-4 w-60 bg-white shadow-2xl
+opacity-0 invisible translate-y-2
+group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+transition-all duration-300 ease-out">
                   {enhanceDropdown.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block px-5 py-3 text-[14px] text-black hover:bg-[#f3f2f0] hover:text-[#bfa34a]"
+                      className="block px-6 py-4 text-[14px] text-black
+hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
                     >
                       {item.name}
                     </Link>
@@ -108,15 +136,28 @@ export default function Header() {
 
 
             {/* CTA */}
-            <div className="pl-6">
+            <div className="pl-6 flex gap-3">
               <Link
                 href="/contact"
-                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a] text-[#bfa34a]
-                           hover:bg-[#bfa34a] hover:text-white transition whitespace-nowrap"
+                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a]
+text-[#bfa34a] hover:bg-[#bfa34a] hover:text-black
+transition-all duration-300 rounded-full"
+
               >
                 BOOK NOW
               </Link>
+              <Link
+                href="/partnership"
+                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a]
+text-[#bfa34a] hover:bg-[#bfa34a] hover:text-black
+transition-all duration-300 rounded-full"
+
+              >
+                Partnership
+              </Link>
             </div>
+
+
           </div>
 
           {/* ================= MOBILE ================= */}
@@ -131,12 +172,17 @@ export default function Header() {
               />
             </Link>
 
-            <button
-              className="text-2xl p-2 border border-black/30 rounded-sm"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <FiX /> : <FiMenu />}
-            </button>
+           <button
+  className={`text-2xl p-2 rounded-sm transition-colors
+    ${scrolled
+      ? "border-black/40 text-black"
+      : "border-white/40 text-white"}
+  `}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <FiX /> : <FiMenu />}
+</button>
+
           </div>
         </nav>
 
@@ -152,22 +198,39 @@ export default function Header() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className={`text-[15px] tracking-wide ${pathname === link.href
-                    ? "text-[#bfa34a]"
-                    : "text-black hover:text-[#bfa34a]"
+                  ? "text-[#bfa34a]"
+                  : "text-black hover:text-[#bfa34a]"
                   }`}
               >
                 {link.name}
               </Link>
             ))}
 
-            <Link
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
+
+            <div className="flex gap-2">
+
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
                          px-6 py-2 text-center tracking-wider"
-            >
-              BOOK NOW
-            </Link>
+              >
+                BOOK NOW
+              </Link>
+
+
+              <Link
+                href="/partnership"
+                onClick={() => setMenuOpen(false)}
+                className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
+                         px-6 py-2 text-center tracking-wider"
+              >
+                Partnership
+              </Link>
+
+
+            </div>
+
           </div>
         </div>
       </header>
