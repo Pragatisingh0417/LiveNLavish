@@ -10,28 +10,18 @@ export default function HomeHeroVideo() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
-  /* ▶️ Play / Pause */
   const togglePlay = () => {
     if (!videoRef.current) return;
-
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
+    videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause();
+    setIsPlaying(!videoRef.current.paused);
   };
 
-  /* 🔇 Mute / Unmute */
   const toggleMute = () => {
     if (!videoRef.current) return;
-
     videoRef.current.muted = !isMuted;
     setIsMuted(!isMuted);
   };
 
-  /* 👀 Auto-pause when out of view */
   useEffect(() => {
     if (!containerRef.current || !videoRef.current) return;
 
@@ -49,60 +39,72 @@ export default function HomeHeroVideo() {
     );
 
     observer.observe(containerRef.current);
-
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div
-          ref={containerRef}
-          className="relative overflow-hidden rounded-3xl shadow-xl"
-        >
-          {/* VIDEO */}
-          <video
-            ref={videoRef}
-            className="w-full 
-                       h-[220px] 
-                       sm:h-[300px] 
-                       md:h-[420px] 
-                       lg:h-[520px] 
-                       object-cover"
-            src="https://livenlavishevents.com/wp-content/uploads/2021/03/Edited_20210301_090007.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+  <div>
+            <h2 className="text-3xl md:text-4xl font-serif mb-4 text-black">
+              Luxury Events Crafted with Purpose
+            </h2>
 
-          {/* CONTROLS */}
-          <div className="absolute bottom-4 right-4 flex gap-3">
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              At Live & Lavish Events, we design unforgettable experiences that
+              celebrate culture, elegance, and storytelling. Every detail is
+              curated to reflect your vision — elevated, intentional, and bold.
+            </p>
 
-            {/* Play / Pause */}
-            <button
-              onClick={togglePlay}
-              aria-label={isPlaying ? "Pause video" : "Play video"}
-              className="bg-black/60 text-white p-3 rounded-full 
-                         backdrop-blur hover:bg-black/80 transition"
-            >
-              {isPlaying ? <FaPause /> : <FaPlay />}
+            <ul className="space-y-3 text-gray-700">
+              <li>• Premium event design & execution</li>
+              <li>• Cultural celebrations & luxury branding</li>
+              <li>• Immersive experiences that leave impact</li>
+            </ul>
+
+            <button className="mt-8 px-8 py-3 rounded-full bg-[#ad8130] text-white font-semibold hover:opacity-90 transition">
+              Explore Our Work
             </button>
-
-            {/* Mute / Unmute */}
-            <button
-              onClick={toggleMute}
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-              className="bg-black/60 text-white p-3 rounded-full 
-                         backdrop-blur hover:bg-black/80 transition"
-            >
-              {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-            </button>
-
           </div>
-        </div>
+          {/* ================= VIDEO ================= */}
+          <div
+            ref={containerRef}
+            className="relative overflow-hidden rounded-3xl shadow-xl"
+          >
+            <video
+              ref={videoRef}
+              className="w-full h-[260px] md:h-[420px] object-cover"
+              src="https://livenlavishevents.com/wp-content/uploads/2021/03/Edited_20210301_090007.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
 
+            {/* CONTROLS */}
+            <div className="absolute bottom-4 right-4 flex gap-3">
+              <button
+                onClick={togglePlay}
+                className="bg-black/60 text-white p-3 rounded-full backdrop-blur"
+              >
+                {isPlaying ? <FaPause /> : <FaPlay />}
+              </button>
+
+              <button
+                onClick={toggleMute}
+                className="bg-black/60 text-white p-3 rounded-full backdrop-blur"
+              >
+                {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+              </button>
+            </div>
+          </div>
+
+          {/* ================= CONTENT ================= */}
+        
+
+        </div>
       </div>
     </section>
   );

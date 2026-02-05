@@ -58,7 +58,7 @@ export default function AboutBlock() {
 
           <Link
             href="/about"
-            className="inline-block bg-[#ad8130] text-black px-8 py-3 rounded-full font-medium hover:bg-[#c8953f] transition"
+            className="inline-block bg-[#ad8130] text-white px-8 py-3 rounded-full font-medium hover:bg-[#c8953f] transition"
           >
             Learn More
           </Link>

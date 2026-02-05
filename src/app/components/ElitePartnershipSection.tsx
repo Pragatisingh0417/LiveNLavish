@@ -13,7 +13,7 @@ export default function ElitePartnershipSection() {
         <div className="px-8 md:px-16 py-20 flex items-center">
           <h2 className="text-4xl md:text-6xl font-serif leading-tight">
             Partner with <br />
-            <span className="text-[#d4af37]">LINE N LAVISH</span>
+            <span className="text-[#d4af37]">LIVE N LAVISH</span>
             <br />
             at LNL Summit
           </h2>
@@ -26,10 +26,11 @@ export default function ElitePartnershipSection() {
             Sponsoring the SIS Summit positions your brand at the center of
             innovation, leadership, and future-forward sales growth.
           </p>
-
-          <button className="mt-10 w-fit px-8 py-3 rounded-full border border-[#d4af37] text-[#d4af37] font-semibold hover:bg-[#d4af37] hover:text-black transition">
+          <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+  This exceptional experience will enhance their skills, connect them with a dynamic community, and empower them to achieve their goals—ultimately driving greater revenue growth for your organization.</p>
+          {/* <button className="mt-10 w-fit px-8 py-3 rounded-full border border-[#d4af37] text-[#d4af37] font-semibold hover:bg-[#d4af37] hover:text-black transition">
             Become a Sponsor
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -125,7 +126,7 @@ export default function ElitePartnershipSection() {
 
           {/* SUBMIT */}
           <div className="md:col-span-2 mt-8">
-            <button className="w-full md:w-auto px-10 py-4 rounded-full bg-[#d4af37] text-black font-semibold hover:opacity-90 transition">
+            <button className="w-full md:w-auto px-10 py-4 rounded-full bg-[#d4af37] text-white font-semibold hover:opacity-90 transition">
               Submit Partnership Request
             </button>
           </div>

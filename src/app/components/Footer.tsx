@@ -19,7 +19,7 @@ export default function Footer() {
             className=""
           />
           <p className="text-sm leading-relaxed text-[#0b0b0b] ">
-           Live N Lavish Events, LLC is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
+            Live N Lavish Events, LLC is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
           </p>
 
           {/* Social Icons */}
@@ -44,8 +44,13 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-[#2a292b]">About Us</Link></li>
             <li><Link href="/services" className="hover:text-[#2a292b]">Services</Link></li>
             <li><Link href="/celebrations" className="hover:text-[#2a292b]">Celebrations</Link></li>
-            <li><Link href="/lavishBranding" className="hover:text-[#2a292b]">My Brand</Link></li>
-                        <li><Link href="/contact" className="hover:text-[#2a292b]">Contact Us</Link></li>
+            <li><Link href="/contact" className="hover:text-[#2a292b]">Contact Us</Link></li>
+            <li><Link href="/lavish-branding-workshop" className="hover:text-[#2a292b]">Lavish Branding Workshop</Link></li>
+            <li><Link href="/city-entertainment-guide" className="hover:text-[#2a292b]">City Entertainment Guide</Link></li>
+                        <li><Link href="/blogs/meet-lekita-logan-range" className="hover:text-[#2a292b]">Blog</Link></li>
+
+            <li><Link href="/catalogs" className="hover:text-[#2a292b]">Catalogs</Link></li>
+
 
           </ul>
         </div>
@@ -54,11 +59,18 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-lg mb-3">Our Services</h3>
           <ul className="space-y-2 text-sm">
-            <li>Wedding Planning</li>
-            <li>Event Management</li>
-            <li>Decor & Styling</li>
-            <li>Venue Setup</li>
-            <li>Entertainment</li>
+            <li> <Link href="/services" className="hover:text-[#2a292b]" > Full-Service Wedding Planning & Decor </Link>
+            </li>
+            <li> <Link href="/services" className="hover:text-[#2a292b]" >Wedding Elopements & Intimate Micro Weddings </Link></li>
+            <li> <Link href="/services" className="hover:text-[#2a292b]" >Oceanfront Weddings</Link></li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" > Luxury Weddings
+            </Link> </li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" > Luxury Design & Decor
+
+            </Link> </li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" >Custom Floral Arrangement
+            </Link> </li>
+           
           </ul>
         </div>
 
@@ -77,21 +89,21 @@ export default function Footer() {
             </li>
           </ul>
 
-          <div className="flex gap-2 mt-2">  
+          <div className="flex gap-2 mt-2">
             <Image
-            src="/images/shop-2.jpeg"
-            alt="celebration"
-            width={600}
-            height={800}
-            className="w-[100px] h-[100px] object-cover rounded-xl "
-          />
+              src="/images/shop-2.jpeg"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl "
+            />
             <Image
               src="/images/lavish-6.png"
               alt="celebration"
               width={600}
               height={800}
               className="w-[100px] h-[100px] object-cover rounded-xl "
-            /> 
+            />
             <Image
               src="/images/lavish-7.png"
               alt="celebration"
@@ -100,10 +112,10 @@ export default function Footer() {
               className="w-[100px] h-[100px] object-cover rounded-xl"
             />
 
-            
-            
-            </div>
- <div className="flex gap-2 mt-2">  <Image
+
+
+          </div>
+          <div className="flex gap-2 mt-2">  <Image
             src="/images/lavish-8.png"
             alt="celebration"
             width={600}
@@ -116,7 +128,7 @@ export default function Footer() {
               width={600}
               height={800}
               className="w-[100px] h-[100px] object-cover rounded-xl "
-            /> 
+            />
             <Image
               src="/images/shop-4.jpeg"
               alt="celebration"
@@ -125,9 +137,9 @@ export default function Footer() {
               className="w-[100px] h-[100px] object-cover rounded-xl"
             />
 
-            
-            
-            </div>
+
+
+          </div>
 
         </div>
 

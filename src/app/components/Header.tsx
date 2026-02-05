@@ -146,7 +146,7 @@ transition-all duration-300 rounded-full"
               >
                 BOOK NOW
               </Link>
-              <Link
+              {/* <Link
                 href="/partnership"
                 className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a]
 text-[#bfa34a] hover:bg-[#bfa34a] hover:text-black
@@ -154,7 +154,7 @@ transition-all duration-300 rounded-full"
 
               >
                 Partnership
-              </Link>
+              </Link> */}
             </div>
 
 
@@ -219,14 +219,14 @@ transition-all duration-300 rounded-full"
               </Link>
 
 
-              <Link
+              {/* <Link
                 href="/partnership"
                 onClick={() => setMenuOpen(false)}
                 className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
                          px-6 py-2 text-center tracking-wider"
               >
                 Partnership
-              </Link>
+              </Link> */}
 
 
             </div>

@@ -16,19 +16,15 @@ import HomeShowcaseGrid from "./components/HomeShowcaseGrid";
 export default function Home() {
   return (
     <>
-    <Banner />
-    <AboutBlock />
-
-    <ServicesBlock />
-            <HomeHeroVideo />
-    <HomeShowcaseGrid />
-
-    <CTA />
-    <ShopCategories />
-    <Catalogs />
-    <Testimonials />
-    {/* <OfferSection /> */}
-    <FAQ />
+      <Banner />
+      <AboutBlock />
+      <HomeHeroVideo />
+      <HomeShowcaseGrid />
+      <CTA />
+      <ShopCategories />
+      <Catalogs />
+      <Testimonials />
+      <FAQ />
     </>
   );
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import ClientWrapper from "./components/ClientWrapper";
 import Footer from "./components/Footer";
+import FloatingPartnershipButton from "./components/FloatingPartnershipButton";
 
 // Optional (keep if you're using them somewhere)
 const geistSans = Geist({
@@ -41,6 +42,7 @@ export default function RootLayout({
     >
       <body className="font-[var(--font-montserrat)] bg-[#f8f9f7]">
         <ClientWrapper>
+          <FloatingPartnershipButton />
           <Header />
           {children}
           <Footer />

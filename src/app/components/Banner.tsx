@@ -13,19 +13,25 @@ export default function Banner() {
       image: "/images/home20-slider_2.jpeg",
       title: "Luxury Wedding Experiences",
       subtitle: "Where elegance meets unforgettable moments",
-      cta: "Explore Our Events",
+      cta: "Explore Our Services",
+          ctaLink: "/services",
+
     },
     {
       image: "/images/image-2.jpeg",
       title: "Designed With Perfection",
       subtitle: "Every detail crafted with love & luxury",
       cta: "View Our Work",
+          ctaLink: "/services",
+
     },
     {
       image: "/images/home20-slider_1.jpeg",
       title: "Celebrate In Style",
       subtitle: "Bespoke celebrations that feel timeless",
       cta: "Plan Your Event",
+          ctaLink: "/contact",
+
     },
   ];
 
@@ -98,7 +104,7 @@ export default function Banner() {
                   </motion.p>
 
                   <motion.a
-                    href="#"
+                    href={slide.ctaLink}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
