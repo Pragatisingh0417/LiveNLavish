@@ -58,7 +58,7 @@ export default function Header() {
       {/* HEADER */}
 <header
   className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300
-    ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}
+    ${scrolled ? "bg-white shadow-sm" : "bg-black"}
   `}
 >
         <nav className="max-w-[1400px] mx-auto px-10 h-[100px] flex items-center">
