@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -23,17 +23,31 @@ export default function Footer() {
           </p>
 
           {/* Social Icons */}
-          <div className="flex space-x-4 mt-4">
-            {[FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="p-2 bg-[#262528] text-white rounded-full hover:bg-[#5a585b] transition"
-              >
-                <Icon size={16} />
-              </a>
-            ))}
-          </div>
+         {/* SOCIAL ICONS */}
+                   <div className="flex items-center gap-3">
+                     <a
+                       href="https://www.facebook.com/LavishEventPlanning/"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaFacebookF />
+                     </a>
+                     <a
+                       href="https://www.instagram.com/live_n_lavish"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaInstagram />
+                     </a>
+                     <a
+                       href="https://x.com/livenlavish"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaTwitter />
+                     </a>
+                     
+                   </div>
         </div>
 
         {/* Quick Links */}

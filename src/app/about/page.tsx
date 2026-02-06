@@ -66,7 +66,7 @@ export default function AboutPage() {
                         </h2>
 
                         <p className="text-[#201f1f] text-lg leading-relaxed">
-                            <span className="font-semibold text-[#ad8130]">Live N Lavish Events , LLC —</span>,
+                            <span className="font-semibold text-[#ad8130]">Live N Lavish Events, LLC — </span> 
                             is a full service Wedding & Event Management company that provides Wedding Planning,
                             Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals,
                             Live Entertainment, Lighting Services and more to Palm Beach County, Florida, Dade County,
@@ -89,12 +89,12 @@ export default function AboutPage() {
                         <div className="mt-6">
                             <p className="text-xl font-serif text-[#656168]">— Live N Lavish Events Team</p>
                         </div>
-                         <Link
-              href="/catalogs"
-              className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#a494d0] transition-all duration-300 text-sm sm:text-base"
-            >
-              Learn More
-            </Link>
+                        <Link
+                            href="/catalogs"
+                            className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
+                        >
+                            Learn More
+                        </Link>
                     </motion.div>
                 </div>
 
@@ -122,11 +122,11 @@ export default function AboutPage() {
                             into a reality that feels luxurious, effortless, and unforgettable.
                         </p>
                         <Link
-              href="/contact"
-              className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#9e8cd1] transition-all duration-300 text-sm sm:text-base"
-            >
-              Learn More
-            </Link>
+                            href="/contact"
+                            className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
+                        >
+                            Learn More
+                        </Link>
                     </motion.div>
 
                     {/* Mission Image Grid */}

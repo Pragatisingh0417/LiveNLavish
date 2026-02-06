@@ -56,7 +56,7 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300
+        className={`fixed top-[44px] left-0 w-full z-50 backdrop-blur-md transition-all duration-300
     ${scrolled ? "bg-white shadow-sm" : "bg-black"}
   `}
       >
@@ -65,76 +65,76 @@ export default function Header() {
           {/* ================= DESKTOP ================= */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center w-full">
 
-  {/* LEFT MENU */}
-  <div className="flex justify-end gap-7 pr-8">
-    {leftLinks.map((link) => (
-      <Link key={link.href} href={link.href} className={linkClass(link.href)}>
-        {link.name}
-      </Link>
-    ))}
-  </div>
+            {/* LEFT MENU */}
+            <div className="flex justify-end gap-7 pr-8">
+              {leftLinks.map((link) => (
+                <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+                  {link.name}
+                </Link>
+              ))}
+            </div>
 
-  {/* LOGO — NOW TRULY CENTERED */}
-  <div className="flex justify-center">
-    <Image
-      src={scrolled ? "/main-logo2.png" : "/live n lavish logo white .png"}
-      alt="Live N Lavish Events"
-      width={155}
-      height={100}
-      priority
-      className="h-[130px] w-auto object-contain transition-all duration-300"
-    />
-  </div>
+            {/* LOGO — NOW TRULY CENTERED */}
+            <div className="flex justify-center">
+              <Image
+                src={scrolled ? "/main-logo2.png" : "/live n lavish logo white .png"}
+                alt="Live N Lavish Events"
+                width={155}
+                height={100}
+                priority
+                className="h-[130px] w-auto object-contain transition-all duration-300"
+              />
+            </div>
 
-  {/* RIGHT MENU + CTA */}
-  <div className="flex justify-start items-center gap-7 pl-8 whitespace-nowrap">
+            {/* RIGHT MENU + CTA */}
+            <div className="flex justify-start items-center gap-7 pl-8 whitespace-nowrap">
 
-  {/* MY BRANDS DROPDOWN */}
-  <div className="relative group">
-    <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
-      My Brands
-    </span>
+              {/* MY BRANDS DROPDOWN */}
+              <div className="relative group">
+                <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
+                  My Brands
+                </span>
 
-    <div
-      className="absolute left-0 top-full mt-4 w-64 bg-white shadow-2xl
+                <div
+                  className="absolute left-0 top-full mt-4 w-64 bg-white shadow-2xl
                  opacity-0 invisible translate-y-2
                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                  transition-all duration-300 ease-out z-50"
-    >
-      {enhanceDropdown.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className="block px-6 py-4 text-[14px] text-black
+                >
+                  {enhanceDropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-6 py-4 text-[14px] text-black
                      hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
-        >
-          {item.name}
-        </Link>
-      ))}
-    </div>
-  </div>
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
-  {/* OTHER RIGHT LINKS */}
-  {rightLinks.map((link) => (
-    <Link key={link.href} href={link.href} className={linkClass(link.href)}>
-      {link.name}
-    </Link>
-  ))}
+              {/* OTHER RIGHT LINKS */}
+              {rightLinks.map((link) => (
+                <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+                  {link.name}
+                </Link>
+              ))}
 
-  {/* CTA */}
-  <Link
-    href="/contact"
-    className="ml-4 px-7 py-2 text-[14px] tracking-wider
+              {/* CTA */}
+              <Link
+                href="/contact"
+                className="ml-4 px-7 py-2 text-[14px] tracking-wider
                border border-[#bfa34a] text-[#bfa34a]
                hover:bg-[#bfa34a] hover:text-black
                transition-all duration-300 rounded-full"
-  >
-    BOOK NOW
-  </Link>
-  
-</div>
+              >
+                BOOK NOW
+              </Link>
 
-</div>
+            </div>
+
+          </div>
 
 
           {/* ================= MOBILE ================= */}
