@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   const rightLinks = [
-    { name: " Enhance My Brands", href: "/lavishBranding" },
+    // { name: " Enhance My Brands", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
     { name: "Blogs", href: "/blogs/meet-lekita-logan-range" },
 
@@ -40,14 +40,13 @@ export default function Header() {
   }, []);
 
   const linkClass = (href: string) =>
-  `relative text-[15px] tracking-wide transition-all duration-200
-  ${
-    pathname === href
+    `relative text-[15px] tracking-wide transition-all duration-200
+  ${pathname === href
       ? "text-[#bfa34a]"
       : scrolled
         ? "text-black hover:text-[#bfa34a]"
         : "text-white hover:text-[#bfa34a]"
-  }
+    }
   after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:bg-[#bfa34a]
   after:w-0 hover:after:w-full after:transition-all after:duration-300`;
 
@@ -56,109 +55,87 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-<header
-  className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300
+      <header
+        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300
     ${scrolled ? "bg-white shadow-sm" : "bg-black"}
   `}
->
+      >
         <nav className="max-w-[1400px] mx-auto px-10 h-[100px] flex items-center">
 
           {/* ================= DESKTOP ================= */}
-          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto] items-center w-full">
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center w-full">
 
-            {/* LEFT MENU */}
-            <div className="flex justify-end gap-7 pr-8">
-              {leftLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={linkClass(link.href)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+  {/* LEFT MENU */}
+  <div className="flex justify-end gap-7 pr-8">
+    {leftLinks.map((link) => (
+      <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+        {link.name}
+      </Link>
+    ))}
+  </div>
 
-            {/* LOGO */}
-            <Image
-  src={
-    scrolled
-      ? "/main-logo2.png"                 
-      : "/live n lavish logo white .png" 
-  }
-  alt="Live N Lavish Events"
-  width={155}
-  height={100}
-  priority
-  className="h-[130px] w-auto object-contain transition-all duration-300"
-/>
+  {/* LOGO — NOW TRULY CENTERED */}
+  <div className="flex justify-center">
+    <Image
+      src={scrolled ? "/main-logo2.png" : "/live n lavish logo white .png"}
+      alt="Live N Lavish Events"
+      width={155}
+      height={100}
+      priority
+      className="h-[130px] w-auto object-contain transition-all duration-300"
+    />
+  </div>
 
+  {/* RIGHT MENU + CTA */}
+  <div className="flex justify-start items-center gap-7 pl-8 whitespace-nowrap">
 
-            {/* RIGHT MENU */}
-            <div className="flex justify-start gap-7 pl-8 whitespace-nowrap items-center">
+  {/* MY BRANDS DROPDOWN */}
+  <div className="relative group">
+    <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
+      My Brands
+    </span>
 
-              {/* Enhance My Brands Dropdown */}
-              <div className="relative group">
-                <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
-                  Enhance My Brands
-                </span>
+    <div
+      className="absolute left-0 top-full mt-4 w-64 bg-white shadow-2xl
+                 opacity-0 invisible translate-y-2
+                 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                 transition-all duration-300 ease-out z-50"
+    >
+      {enhanceDropdown.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className="block px-6 py-4 text-[14px] text-black
+                     hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
 
-                <div className="absolute left-0 top-full mt-4 w-60 bg-white shadow-2xl
-opacity-0 invisible translate-y-2
-group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-transition-all duration-300 ease-out">
-                  {enhanceDropdown.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-6 py-4 text-[14px] text-black
-hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+  {/* OTHER RIGHT LINKS */}
+  {rightLinks.map((link) => (
+    <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+      {link.name}
+    </Link>
+  ))}
 
-              {/* Rest Right Links */}
-              {rightLinks
-                .filter((l) => l.name !== " Enhance My Brands")
-                .map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={linkClass(link.href)}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-            </div>
+  {/* CTA */}
+  <Link
+    href="/contact"
+    className="ml-4 px-7 py-2 text-[14px] tracking-wider
+               border border-[#bfa34a] text-[#bfa34a]
+               hover:bg-[#bfa34a] hover:text-black
+               transition-all duration-300 rounded-full"
+  >
+    BOOK NOW
+  </Link>
+  
+</div>
 
+</div>
 
-            {/* CTA */}
-            <div className="pl-6 flex gap-3">
-              <Link
-                href="/contact"
-                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a]
-text-[#bfa34a] hover:bg-[#bfa34a] hover:text-black
-transition-all duration-300 rounded-full"
-
-              >
-                BOOK NOW
-              </Link>
-              {/* <Link
-                href="/partnership"
-                className="px-7 py-2 text-[14px] tracking-wider border border-[#bfa34a]
-text-[#bfa34a] hover:bg-[#bfa34a] hover:text-black
-transition-all duration-300 rounded-full"
-
-              >
-                Partnership
-              </Link> */}
-            </div>
-
-
-          </div>
 
           {/* ================= MOBILE ================= */}
           <div className="lg:hidden flex justify-between items-center w-full">
@@ -172,16 +149,16 @@ transition-all duration-300 rounded-full"
               />
             </Link>
 
-           <button
-  className={`text-2xl p-2 rounded-sm transition-colors
+            <button
+              className={`text-2xl p-2 rounded-sm transition-colors
     ${scrolled
-      ? "border-black/40 text-black"
-      : "border-white/40 text-white"}
+                  ? "border-black/40 text-black"
+                  : "border-white/40 text-white"}
   `}
-  onClick={() => setMenuOpen(!menuOpen)}
->
-  {menuOpen ? <FiX /> : <FiMenu />}
-</button>
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <FiX /> : <FiMenu />}
+            </button>
 
           </div>
         </nav>
