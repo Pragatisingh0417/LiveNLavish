@@ -13,12 +13,10 @@ export default function Header() {
   const leftLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Celebrations", href: "/celebrations" },
     { name: "Services", href: "/services" },
   ];
 
   const rightLinks = [
-    // { name: " Enhance My Brands", href: "/lavishBranding" },
     { name: "Catalogs", href: "/catalogs" },
     { name: "Blogs", href: "/blogs/meet-lekita-logan-range" },
 
@@ -27,6 +25,10 @@ export default function Header() {
   const enhanceDropdown = [
     { name: "Lavish Branding Workshop", href: "/lavish-branding-workshop" },
     { name: "City Entertainment Guide", href: "/city-entertainment-guide" },
+  ];
+
+  const celebrationDropdown = [
+    { name: "Corporate Events & Special Events  ", href: "/celebrations" },
   ];
 
   const [scrolled, setScrolled] = useState(false);
@@ -66,13 +68,49 @@ export default function Header() {
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center w-full">
 
             {/* LEFT MENU */}
-            <div className="flex justify-end gap-7 pr-8">
-              {leftLinks.map((link) => (
-                <Link key={link.href} href={link.href} className={linkClass(link.href)}>
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+            {/* LEFT MENU */}
+<div className="flex justify-end gap-7 pr-8">
+
+  {/* All links EXCEPT Celebrations */}
+  {leftLinks
+    .filter((link) => link.name !== "Celebrations")
+    .map((link) => (
+      <Link
+        key={link.href}
+        href={link.href}
+        className={linkClass(link.href)}
+      >
+        {link.name}
+      </Link>
+    ))}
+
+  {/* CELEBRATIONS DROPDOWN */}
+  <div className="relative group">
+    <span className={`${linkClass("/celebrations")} cursor-pointer`}>
+      Celebrations
+    </span>
+
+    <div
+      className="absolute left-0 top-full mt-4 w-64 bg-white shadow-2xl
+      opacity-0 invisible translate-y-2
+      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+      transition-all duration-300 ease-out z-50"
+    >
+      {celebrationDropdown.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className="block px-6 py-4 text-[14px] text-black
+          hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+</div>
+
 
             {/* LOGO — NOW TRULY CENTERED */}
             <div className="flex justify-center">
