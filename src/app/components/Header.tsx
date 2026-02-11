@@ -51,23 +51,21 @@ export default function Header() {
     }
   after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:bg-[#bfa34a]
   after:w-0 hover:after:w-full after:transition-all after:duration-300`;
-
-
-
   return (
     <>
       {/* HEADER */}
       <header
-        className={`fixed top-[44px] left-0 w-full z-50 backdrop-blur-md transition-all duration-300
+  className={`fixed top-0 md:top-[44px] left-0 w-full z-50 backdrop-blur-md transition-all duration-300
     ${scrolled ? "bg-white shadow-sm" : "bg-black"}
   `}
-      >
-        <nav className="max-w-[1400px] mx-auto px-10 h-[100px] flex items-center">
+>
+
+       
+        <nav className="max-w-[1200px] mx-auto  h-[90px] flex items-center">
 
           {/* ================= DESKTOP ================= */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center w-full">
 
-            {/* LEFT MENU */}
             {/* LEFT MENU */}
 <div className="flex justify-end gap-7 pr-8">
 
@@ -179,11 +177,12 @@ export default function Header() {
           <div className="lg:hidden flex justify-between items-center w-full">
             <Link href="/">
               <Image
-                src="/main-logo2.png"
+                src={scrolled ? "/main-logo2.png" : "/live n lavish logo white .png"}
                 alt="Live N Lavish Events"
-                width={130}
-                height={36}
+                width={155}
+                height={100}
                 priority
+                className="h-[130px] w-auto object-contain transition-all duration-300"
               />
             </Link>
 
@@ -202,56 +201,124 @@ export default function Header() {
         </nav>
 
         {/* MOBILE MENU */}
-        <div
-          className={`lg:hidden bg-[#f3f2f0] border-t border-black/10 transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
-            }`}
+       {/* ================= MOBILE MENU ================= */}
+<div
+  className={`lg:hidden fixed top-[90px] left-0 w-full h-[calc(100vh-90px)] z-40
+    transition-all duration-500
+    ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+  `}
+>
+  {/* Background */}
+  <div
+    className="absolute inset-0 bg-black/50"
+    onClick={() => setMenuOpen(false)}
+  />
+
+  {/* Scrollable Panel */}
+  <div
+    className={`relative bg-[#f3f2f0] h-full overflow-y-auto
+      transform transition-transform duration-500
+      ${menuOpen ? "translate-y-0" : "-translate-y-full"}
+    `}
+  >
+    <div className="px-8 py-8 flex flex-col space-y-6">
+
+      {[...leftLinks].map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          onClick={() => setMenuOpen(false)}
+          className={`text-[18px] ${
+            pathname === link.href
+              ? "text-[#bfa34a]"
+              : "text-black hover:text-[#bfa34a]"
+          }`}
         >
-          <div className="flex flex-col px-8 py-6 space-y-5">
-            {[...leftLinks, ...rightLinks].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className={`text-[15px] tracking-wide ${pathname === link.href
-                  ? "text-[#bfa34a]"
-                  : "text-black hover:text-[#bfa34a]"
-                  }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          {link.name}
+        </Link>
+      ))}
 
+      {/* Celebrations */}
+      <div className="pt-4 border-t border-black/10">
+        <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
+          Celebrations
+        </p>
+        {celebrationDropdown.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={() => setMenuOpen(false)}
+            className="block text-[16px] text-black hover:text-[#bfa34a] mb-3"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
 
-            <div className="flex gap-2">
+      {/* My Brands */}
+      <div className="pt-4 border-t border-black/10">
+        <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
+          My Brands
+        </p>
+        {enhanceDropdown.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={() => setMenuOpen(false)}
+            className="block text-[16px] text-black hover:text-[#bfa34a] mb-3"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
 
-              <Link
-                href="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
-                         px-6 py-2 text-center tracking-wider"
-              >
-                BOOK NOW
-              </Link>
+      {/* Right Links */}
+      <div className="pt-4 border-t border-black/10">
+        {rightLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+            className={`block text-[18px] mb-4 ${
+              pathname === link.href
+                ? "text-[#bfa34a]"
+                : "text-black hover:text-[#bfa34a]"
+            }`}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </div>
 
+      {/* CTA */}
+      <div className="pt-6 flex border-t border-black/10   gap-4">
+        <Link
+          href="/contact"
+          onClick={() => setMenuOpen(false)}
+          className="border border-[#bfa34a] text-[#bfa34a]
+                     px-6 py-3 text-center tracking-wider"
+        >
+          BOOK NOW
+        </Link>
 
-              {/* <Link
-                href="/partnership"
-                onClick={() => setMenuOpen(false)}
-                className="mt-4 inline-block border border-[#bfa34a] text-[#bfa34a]
-                         px-6 py-2 text-center tracking-wider"
-              >
-                Partnership
-              </Link> */}
+        <Link
+          href="/partnership"
+          onClick={() => setMenuOpen(false)}
+          className="border border-[#bfa34a] text-[#bfa34a]
+                     px-6 py-3 text-center tracking-wider"
+        >
+          Partnership
+        </Link>
+      </div>
 
+    </div>
+  </div>
+</div>
 
-            </div>
-
-          </div>
-        </div>
       </header>
 
       {/* PAGE OFFSET */}
-      <div className="h-[72px]" />
+<div className="h-[90px] md:h-[134px]" />
     </>
   );
 }

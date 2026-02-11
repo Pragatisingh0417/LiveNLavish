@@ -20,7 +20,7 @@ export default function AboutBlock() {
           <div className="rounded-3xl overflow-hidden shadow-2xl">
             <Image
               src="/images/lavish-5.png"
-              alt="About Live N Lavish Events"
+              alt="Luxury Wedding & Event Planning - Live N Lavish Events"
               width={600}
               height={800}
               className="w-full h-[480px] object-cover"
@@ -38,29 +38,38 @@ export default function AboutBlock() {
           className="flex-1 text-center md:text-left"
         >
           <span className="uppercase tracking-[5px] text-[#ad8130] text-xs font-semibold">
-            Welcome to Live N Lavish Events, LLC
-
+            What We Do
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-black mt-4 mb-6">
-            About LNL Events
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light text-black mt-4 mb-6">
+            Your Celebration Deserves a Lavish Experience
           </h2>
 
           <p className="text-gray-800 leading-relaxed mb-5">
-            <strong className="text-[#ad8130]">Live N Lavish Events, LLC</strong> is a full service Wedding & Event Management company that provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals, Live Entertainment, Lighting Services and more to Palm Beach County, Dade County, Miami and surrounding areas. Our team prides themselves in putting every client first and providing a stress-free planning experience.
+            For over 15 years, <strong className="text-[#ad8130]">Live N Lavish Events</strong> has specialized in planning and producing elevated weddings, corporate experiences, and luxury floral & décor installations throughout South Florida and beyond.
           </p>
 
-          <p className="text-gray-800 leading-relaxed mb-8">
-          We produce stunning, all-inclusive weddings & special events that captivates diverse audiences.
-
-
+          <p className="text-gray-800 leading-relaxed mb-6">
+            From intimate celebrations to multi-day productions, we transform your vision into an unforgettable experience with seamless planning, refined design, and exceptional execution.
           </p>
+
+          {/* Services List */}
+          <div className="mb-8 space-y-3">
+            <p className="font-semibold text-black">Services We Offer:</p>
+
+            <ul className="text-gray-800 space-y-2">
+              <li>• Luxury Wedding Planning & Event Management</li>
+              <li>• Corporate Event Planning & Production</li>
+              <li>• Luxury Floral Design & Custom Décor</li>
+              <li>• Full-Service Event Styling & Installations</li>
+            </ul>
+          </div>
 
           <Link
-            href="/about"
+            href="/services"
             className="inline-block bg-[#ad8130] text-white px-8 py-3 rounded-full font-medium hover:bg-[#c8953f] transition"
           >
-            Learn More
+            Explore Our Services
           </Link>
         </motion.div>
       </div>

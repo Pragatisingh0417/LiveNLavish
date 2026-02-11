@@ -12,6 +12,8 @@ import AboutBlock from "./components/AboutBlock";
 import ServicesBlock from "./components/ServicesBlock";
 import HomeHeroVideo from "./components/HomeHeroVideo";
 import HomeShowcaseGrid from "./components/HomeShowcaseGrid";
+import SignatureStatement from "./components/SignatureStatement";
+import CTASection from "./components/CTASection";
 
 export default function Home() {
   return (
@@ -24,7 +26,8 @@ export default function Home() {
       <ShopCategories />
       <Catalogs />
       <Testimonials />
-      <FAQ />
+      <SignatureStatement />
+      <CTASection />
     </>
   );
 }

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import TestimonialSlider from "../components/testimonials";
+import FAQ from "../components/FAQ";
 
 export default function ServicesPage() {
   const services = [
@@ -208,6 +209,7 @@ export default function ServicesPage() {
 
 
       <TestimonialSlider />
+      <FAQ />
     </section>
   );
 }

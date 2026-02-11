@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function TopHeader() {
   return (
-    <div className="w-full bg-black text-white text-sm">
+    <div className="hidden md:block w-full bg-black text-white text-sm">
       <div className="max-w-[1400px] mx-auto px-6 h-[44px] flex items-center justify-between">
 
         {/* LEFT – EMAIL */}
@@ -45,7 +45,6 @@ export default function TopHeader() {
             >
               <FaTwitter />
             </a>
-            
           </div>
 
           {/* CTA */}

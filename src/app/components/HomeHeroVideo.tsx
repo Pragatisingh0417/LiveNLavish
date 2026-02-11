@@ -49,19 +49,34 @@ export default function HomeHeroVideo() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
   <div>
             <h2 className="text-3xl md:text-4xl font-serif mb-4 text-black">
-              Luxury Events Crafted with Purpose
+              Why Choose Us
             </h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              At Live & Lavish Events, we design unforgettable experiences that
-              celebrate culture, elegance, and storytelling. Every detail is
-              curated to reflect your vision — elevated, intentional, and bold.
+            <p className="text-gray-600  leading-relaxed">
+             Luxury isn’t just how it looks, it's how it feels.
+
+            </p>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+ We combine strategic planning, elevated design, and a calm, supportive experience to ensure you feel confidently cared for from concept to celebration.
+
             </p>
 
             <ul className="space-y-3 text-gray-700">
-              <li>• Premium event design & execution</li>
-              <li>• Cultural celebrations & luxury branding</li>
-              <li>• Immersive experiences that leave impact</li>
+              <li> ✔ 15+ Years of Experience</li>
+              <li> ✔ Award-Winning Luxury Event Company
+</li>
+              <li> ✔ Editorial Floral & Event Design
+</li>
+<li> ✔ Seamless Communication + Expert Execution
+
+</li>
+<li>✔ Trusted Vendor Partnerships
+
+</li>
+<li>  ✔ A Faith-Filled, Service-Driven Experience
+
+</li>
             </ul>
 
             <button className="mt-8 px-8 py-3 rounded-full bg-[#ad8130] text-white font-semibold hover:opacity-90 transition">
