@@ -104,25 +104,148 @@ export default function ServicesPage() {
           </motion.h1>
         </div>
       </section>
+{/* ========================================= */}
+{/* Luxury Wedding Planning Section */}
+{/* ========================================= */}
+
+<section className="bg-white py-24">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* Header */}
+    <div className="text-center mb-14">
+      <h2 className="text-4xl md:text-5xl font-serif text-[#101011] mb-6">
+        Luxury Wedding Planning
+      </h2>
+
+      <p className="text-[#ad8130] tracking-[2px] uppercase text-sm font-medium mb-4">
+        Wedding Planning • Event Management • Floral Design & Décor
+      </p>
+
+      <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        Creating unforgettable weddings with calm, confidence, and elevated style.
+      </p>
+    </div>
+
+    {/* Overview */}
+    <div className="max-w-4xl mx-auto text-center mb-20">
+      <h3 className="text-2xl font-serif text-[#101011] mb-6">Overview</h3>
+      <p className="text-gray-700 text-lg leading-relaxed">
+        Your wedding should be a joyful, beautifully coordinated experience — not a stressful one.
+        At <span className="font-semibold text-[#ad8130]">Live N Lavish Events</span>, we guide you
+        through every step with clarity, expertise, and a signature design approach rooted in
+        intentionality and excellence.
+      </p>
+      <p className="text-gray-700 text-lg leading-relaxed mt-6">
+        We specialize in elegant, modern-classic, romantic, and editorial-style weddings
+        for couples seeking a luxury experience from start to finish.
+      </p>
+    </div>
+
+    {/* Wedding Experiences */}
+    <div className="space-y-20">
+
+      {/* Full Service Planning */}
+      <div>
+        <h3 className="text-3xl font-serif text-[#101011] mb-6">
+          Full-Service Wedding Planning
+        </h3>
+
+        <p className="text-lg text-gray-700 mb-6">
+          For the couple who wants a seamless, curated, and stress-free planning journey.
+          We manage every detail from venue selection to vendor management, design direction,
+          guest logistics, timelines, and full event execution.
+        </p>
+
+        <p className="text-[#ad8130] font-medium mb-4">
+          Perfect for couples seeking a luxury concierge-style planning experience.
+        </p>
+
+        <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
+          <li>✔ Venue selection & walkthroughs</li>
+          <li>✔ Vendor management</li>
+          <li>✔ Budget oversight</li>
+          <li>✔ Complete planning system</li>
+          <li>✔ Custom design direction</li>
+          <li>✔ Timeline creation</li>
+          <li>✔ Rehearsal management</li>
+          <li>✔ Full event-day execution</li>
+          <li>✔ 2–3 professional coordinators onsite</li>
+        </ul>
+      </div>
+
+      {/* Planning + Design */}
+      <div>
+        <h3 className="text-3xl font-serif text-[#101011] mb-6">
+          Full-Service Planning + Event Design
+        </h3>
+
+        <p className="text-lg text-gray-700 mb-6">
+          Everything included in Full Planning PLUS immersive design + production:
+        </p>
+
+        <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
+          <li>✔ Custom floral design</li>
+          <li>✔ 3D layouts & floorplans</li>
+          <li>✔ Tablescape development</li>
+          <li>✔ Custom installations</li>
+          <li>✔ Luxury décor sourcing</li>
+          <li>✔ Design presentation meeting</li>
+          <li>✔ Onsite design direction</li>
+        </ul>
+      </div>
+
+      {/* Month Of Coordination */}
+      <div>
+        <h3 className="text-3xl font-serif text-[#101011] mb-6">
+          Month-Of Coordination (4–6 Weeks Out)
+        </h3>
+
+        <p className="text-lg text-gray-700 mb-6">
+          Designed for couples who planned everything, but need a professional team
+          to finalize details and execute the day seamlessly.
+        </p>
+
+        <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
+          <li>✔ Vendor confirmation</li>
+          <li>✔ Timeline creation</li>
+          <li>✔ Rehearsal coordination</li>
+          <li>✔ Bridal assistant + coordinator team</li>
+          <li>✔ Full event-day execution</li>
+        </ul>
+      </div>
+
+      {/* Day Of Coordination */}
+      <div>
+        <h3 className="text-3xl font-serif text-[#101011] mb-6">
+          Day-Of Coordination
+        </h3>
+
+        <p className="text-lg text-gray-700">
+          Timeline & vendor management beginning 2 weeks prior
+          with a 3-person team on the wedding day.
+        </p>
+      </div>
+    </div>
+
+    {/* Final CTA */}
+    <div className="text-center mt-24">
+      <p className="text-2xl font-serif text-[#101011] mb-8">
+        Let’s create a wedding that feels timeless, personal, and beautifully you.
+      </p>
+
+      <a
+        href="/contact"
+        className="inline-block bg-[#ad8130] text-white px-10 py-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-300"
+      >
+        Start Your Planning Experience
+      </a>
+    </div>
+
+  </div>
+</section>
 
       {/* SERVICES SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl font-bold text-center text-[#000000] mb-12"
-        >
-          Our Services
-        </motion.h2>
-
-        <p className="text-center text-gray-700 max-w-2xl mx-auto mb-16 text-lg">
-          We offer <strong>full-service wedding planning & in-house decor solutions</strong>.
-          Our team creates unforgettable experiences — from intimate 2-guest ceremonies
-          to luxury 500+ guest celebrations.
-        </p>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-10">
           {services.map((service, index) => (

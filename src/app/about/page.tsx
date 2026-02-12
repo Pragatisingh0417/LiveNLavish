@@ -16,7 +16,7 @@ export default function AboutPage() {
             <div className="relative max-w-7xl mx-auto px-6 md:px-10 pb-20">
 
                 {/* Top Heading */}
-                <motion.h1
+                {/* <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -25,78 +25,106 @@ export default function AboutPage() {
                     text-center mb-16 text-black mt-24"
                 >
                     About Us
-                </motion.h1>
+                </motion.h1> */}
 
                 {/* Two Column Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+                {/* ========================================= */}
+{/* Meet Lekita Range Section */}
+{/* ========================================= */}
 
-                    {/* Left Image */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="relative"
-                    >
-                        <div className="rounded-3xl overflow-hidden shadow-xl border border-white/40 h-600px]">
-                            <Image
-                                src="/images/lady-2.jpg"
-                                alt="About Live n Lavish Events"
-                                width={600}
-                                height={600}
-                                quality={60}
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
+<section className="py-10 bg-[#f8f6f2]">
+  <div className="max-w-7xl mx-auto px-6">
 
-                        {/* Decorative Glow */}
-                        <div className="absolute inset-0 rounded-3xl ring-1 ring-white/30 shadow-[0_0_50px_rgba(215,180,127,0.25)] pointer-events-none"></div>
-                    </motion.div>
+    {/* Section Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-serif text-[#101011] mb-4">
+        Meet Lekita Range
+      </h2>
+      <p className="uppercase tracking-[3px] text-sm text-[#ad8130] font-medium">
+        Founder, CEO & Creative Director
+      </p>
+    </div>
 
-                    {/* Right Text */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="space-y-6"
-                    >
-                        <h2 className="text-3xl font-serif text-[#101011]">
-                            Crafting Unforgettable Celebrations
-                        </h2>
+    {/* Two Column Layout */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
 
-                        <p className="text-[#201f1f] text-lg leading-relaxed">
-                            <span className="font-semibold text-[#ad8130]">Live N Lavish Events, LLC — </span> 
-                            is a full service Wedding & Event Management company that provides Wedding Planning,
-                            Event Planning, Custom Event & Wedding designs, Florals, Pipe & Draping, Decor Rentals,
-                            Live Entertainment, Lighting Services and more to Palm Beach County, Florida, Dade County,
-                            FL, Miami, Florida and surrounding areas. Our team prides themselves in putting every client
-                            first and; providing you with a stress-free planning experience. We produce stunning,
-                            all-inclusive weddings & special events that captivates diverse audiences.
-                        </p>
+      {/* Left Image */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative"
+      >
+        <div className="rounded-3xl overflow-hidden shadow-xl border border-white/40">
+          <Image
+            src="/images/lady-2.jpg"   
+            alt="Lekita Range - Founder of Live N Lavish Events"
+            width={600}
+            height={750}
+            quality={90}
+            className="object-cover w-full h-full"
+          />
+        </div>
 
-                        <p className="text-[#1a1a19] text-lg leading-relaxed">
-                            With years of expertise in designing, planning, and executing luxury weddings and
-                            events, we take pride in our attention to detail, personalized approach, and ability
-                            to turn even the simplest ideas into breathtaking moments.
-                        </p>
+        <div className="absolute inset-0 rounded-3xl ring-1 ring-[#ad8130]/30 shadow-[0_0_50px_rgba(215,180,127,0.25)] pointer-events-none"></div>
+      </motion.div>
 
-                        <p className="text-[#1b1a1a] text-lg leading-relaxed">
-                            Whether it’s an intimate gathering or a grand celebration, our team brings creativity,
-                            precision, and heart into every event.
-                        </p>
+      {/* Right Text */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="space-y-6 text-[#1a1a19] text-lg leading-relaxed"
+      >
+        <h3 className="text-2xl font-serif text-[#101011]">
+          Founder, CEO & Creative Director of Live N Lavish Events
+        </h3>
 
-                        <div className="mt-6">
-                            <p className="text-xl font-serif text-[#656168]">— Live N Lavish Events Team</p>
-                        </div>
-                        <Link
-                            href="/catalogs"
-                            className="inline-block bg-[#ad8130] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#ad8130] transition-all duration-300 text-sm sm:text-base"
-                        >
-                            Learn More
-                        </Link>
-                    </motion.div>
-                </div>
+        <p>
+          I’m <span className="font-semibold text-[#ad8130]">Lekita Range</span>, a wife, mother,
+           woman of Faith, and the creative heart behind Live N Lavish Events, where luxury celebration meets intentional design.
+           
+           
+            For over 15 years, I’ve had the honor of planning and producing elevated weddings, destination experiences, 
+            corporate events, and luxury floral installations throughout South Florida and beyond.
+        </p>
+
+        <p className="italic text-[#656168] border-l-4 border-[#ad8130] pl-4">
+          I built Live N Lavish Events with one mission:
+          to create unforgettable experiences that feel beautifully designed, seamlessly executed, and deeply personal.
+        </p>
+
+        <p>
+          With an MBA, a Bachelor’s degree in Communications & Hospitality, and global accreditation as a Wedding & Event Designer, I bring a rare combination of creativity, strategy, and operational excellence to every celebration. I’ve produced over 200 events, including high-end weddings, celebrity-inspired experiences, galas, brand activations, and luxury social events all known for their emotional impact and refined elegance.
+        </p>
+
+        <p>
+          But beyond the accolades, design skills, and awards, what matters most to me is people — your story, your vision, and your peace of mind.
+        </p>
+
+        <p>
+          I believe luxury is more than beautiful décor — it’s the feeling of being fully supported every step of the way.
+        </p>
+
+        <p>
+My team and I pride ourselves on creating calm, well-organized, elevated experiences where you never feel overwhelmed or alone in the process. From thoughtful planning and curated design to seamless event-day execution, I ensure that every couple, brand, and family feels seen, heard, and cared for.
+        </p>
+
+        <p>
+          At Live N Lavish Events, we turn visions into immersive experiences — events that leave lasting memories, stunning photos, and a feeling your guests will talk about long after the celebration ends.
+        </p>
+
+        <p className="font-serif text-xl text-[#656168] mt-6">
+          — Lekita Range <br />
+          Founder, CEO & Creative Director <br />
+          Live N Lavish Events
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
                 {/* Mission Section */}
                 <div className="mt-28 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">

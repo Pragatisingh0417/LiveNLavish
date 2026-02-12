@@ -28,8 +28,17 @@ export default function Header() {
   ];
 
   const celebrationDropdown = [
-    { name: "Corporate Events & Special Events  ", href: "/celebrations" },
+    {
+      name: "Corporate Events",
+      href: "/corporate-events",
+      subItems: [
+        { name: "Luxury Corporate Event Planning", href: "/corporate-eventss" },
+        { name: "Corporate Floral & Installations", href: "/floral-events" },
+        { name: "Virtual & Hybrid Events", href: "/virtual-and-hybrid-events" },
+      ]
+    },
   ];
+
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -55,59 +64,85 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header
-  className={`fixed top-0 md:top-[44px] left-0 w-full z-50 backdrop-blur-md transition-all duration-300
+        className={`fixed top-0 md:top-[44px] left-0 w-full z-50 backdrop-blur-md transition-all duration-300
     ${scrolled ? "bg-white shadow-sm" : "bg-black"}
   `}
->
+      >
 
-       
-        <nav className="max-w-[1200px] mx-auto  h-[90px] flex items-center">
+
+        <nav className="max-w-[1400px] mx-auto  h-[90px] flex items-center">
 
           {/* ================= DESKTOP ================= */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center w-full">
 
             {/* LEFT MENU */}
-<div className="flex justify-end gap-7 pr-8">
+            <div className="flex justify-end gap-7 pr-8">
 
-  {/* All links EXCEPT Celebrations */}
-  {leftLinks
-    .filter((link) => link.name !== "Celebrations")
-    .map((link) => (
-      <Link
-        key={link.href}
-        href={link.href}
-        className={linkClass(link.href)}
-      >
-        {link.name}
-      </Link>
-    ))}
+              {/* All links EXCEPT Celebrations */}
+              {leftLinks
+                .filter((link) => link.name !== "Celebrations")
+                .map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={linkClass(link.href)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
 
-  {/* CELEBRATIONS DROPDOWN */}
-  <div className="relative group">
-    <span className={`${linkClass("/celebrations")} cursor-pointer`}>
-      Celebrations
-    </span>
+              {/* CELEBRATIONS DROPDOWN */}
+              {/* CELEBRATIONS DROPDOWN */}
+              <div className="relative group">
+                <span className={`${linkClass("/celebrations")} cursor-pointer`}>
+                  Celebrations
+                </span>
 
-    <div
-      className="absolute left-0 top-full mt-4 w-64 bg-white shadow-2xl
-      opacity-0 invisible translate-y-2
-      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-      transition-all duration-300 ease-out z-50"
-    >
-      {celebrationDropdown.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className="block px-6 py-4 text-[14px] text-black
+                <div
+                  className="absolute left-0 top-full mt-4 w-72 bg-white shadow-2xl
+    opacity-0 invisible translate-y-2
+    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+    transition-all duration-300 ease-out z-50"
+                >
+                  {celebrationDropdown.map((item) => (
+                    <div key={item.href} className="relative group/sub">
+
+                      {/* Main Parent Link */}
+                      <Link
+                        href={item.href}
+                        className="block px-6 py-4 text-[14px] text-black
           hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
-        >
-          {item.name}
-        </Link>
-      ))}
-    </div>
-  </div>
+                      >
+                        {item.name}
+                      </Link>
 
-</div>
+                      {/* Submenu */}
+                      {item.subItems && (
+                        <div
+                          className="absolute left-full top-0 w-80 bg-white shadow-2xl
+            opacity-0 invisible translate-x-2
+            group-hover/sub:opacity-100 group-hover/sub:visible group-hover/sub:translate-x-0
+            transition-all duration-300 ease-out"
+                        >
+                          {item.subItems.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className="block px-6 py-4 text-[14px] text-black
+                hover:bg-[#f6f5f3] hover:text-[#bfa34a] transition"
+                            >
+                              → {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
+            </div>
 
 
             {/* LOGO — NOW TRULY CENTERED */}
@@ -128,7 +163,8 @@ export default function Header() {
               {/* MY BRANDS DROPDOWN */}
               <div className="relative group">
                 <span className={`${linkClass("/lavishBranding")} cursor-pointer`}>
-                  My Brands
+                  Our Live Experiences
+
                 </span>
 
                 <div
@@ -201,124 +237,141 @@ export default function Header() {
         </nav>
 
         {/* MOBILE MENU */}
-       {/* ================= MOBILE MENU ================= */}
-<div
-  className={`lg:hidden fixed top-[90px] left-0 w-full h-[calc(100vh-90px)] z-40
+        {/* ================= MOBILE MENU ================= */}
+        <div
+          className={`lg:hidden fixed top-[90px] left-0 w-full h-[calc(100vh-90px)] z-40
     transition-all duration-500
     ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
   `}
->
-  {/* Background */}
-  <div
-    className="absolute inset-0 bg-black/50"
-    onClick={() => setMenuOpen(false)}
-  />
+        >
+          {/* Background */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setMenuOpen(false)}
+          />
 
-  {/* Scrollable Panel */}
-  <div
-    className={`relative bg-[#f3f2f0] h-full overflow-y-auto
+          {/* Scrollable Panel */}
+          <div
+            className={`relative bg-[#f3f2f0] h-full overflow-y-auto
       transform transition-transform duration-500
       ${menuOpen ? "translate-y-0" : "-translate-y-full"}
     `}
-  >
-    <div className="px-8 py-8 flex flex-col space-y-6">
-
-      {[...leftLinks].map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          onClick={() => setMenuOpen(false)}
-          className={`text-[18px] ${
-            pathname === link.href
-              ? "text-[#bfa34a]"
-              : "text-black hover:text-[#bfa34a]"
-          }`}
-        >
-          {link.name}
-        </Link>
-      ))}
-
-      {/* Celebrations */}
-      <div className="pt-4 border-t border-black/10">
-        <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
-          Celebrations
-        </p>
-        {celebrationDropdown.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={() => setMenuOpen(false)}
-            className="block text-[16px] text-black hover:text-[#bfa34a] mb-3"
           >
-            {item.name}
-          </Link>
-        ))}
-      </div>
+            <div className="px-8 py-8 flex flex-col space-y-6">
 
-      {/* My Brands */}
-      <div className="pt-4 border-t border-black/10">
-        <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
-          My Brands
-        </p>
-        {enhanceDropdown.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={() => setMenuOpen(false)}
-            className="block text-[16px] text-black hover:text-[#bfa34a] mb-3"
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
+              {[...leftLinks].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`text-[18px] ${pathname === link.href
+                      ? "text-[#bfa34a]"
+                      : "text-black hover:text-[#bfa34a]"
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
 
-      {/* Right Links */}
-      <div className="pt-4 border-t border-black/10">
-        {rightLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setMenuOpen(false)}
-            className={`block text-[18px] mb-4 ${
-              pathname === link.href
-                ? "text-[#bfa34a]"
-                : "text-black hover:text-[#bfa34a]"
-            }`}
-          >
-            {link.name}
-          </Link>
-        ))}
-      </div>
+              {/* Celebrations */}
+              <div className="pt-4 border-t border-black/10">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
+                  Celebrations
+                </p>
 
-      {/* CTA */}
-      <div className="pt-6 flex border-t border-black/10   gap-4">
-        <Link
-          href="/contact"
-          onClick={() => setMenuOpen(false)}
-          className="border border-[#bfa34a] text-[#bfa34a]
+                {celebrationDropdown.map((item) => (
+                  <div key={item.href} className="mb-4">
+
+                    <Link
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block text-[16px] text-black hover:text-[#bfa34a] mb-2"
+                    >
+                      {item.name}
+                    </Link>
+
+                    {item.subItems && (
+                      <div className="ml-4 border-l border-black/10 pl-4">
+                        {item.subItems.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            onClick={() => setMenuOpen(false)}
+                            className="block text-[15px] text-black/80 hover:text-[#bfa34a] mb-2"
+                          >
+                            → {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+
+              {/* My Brands */}
+              <div className="pt-4 border-t border-black/10">
+                <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
+                  Our Live Experiences
+                </p>
+                {enhanceDropdown.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block text-[16px] text-black hover:text-[#bfa34a] mb-3"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Right Links */}
+              <div className="pt-4 border-t border-black/10">
+                {rightLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`block text-[18px] mb-4 ${pathname === link.href
+                        ? "text-[#bfa34a]"
+                        : "text-black hover:text-[#bfa34a]"
+                      }`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="pt-6 flex border-t border-black/10   gap-4">
+                <Link
+                  href="/contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="border border-[#bfa34a] text-[#bfa34a]
                      px-6 py-3 text-center tracking-wider"
-        >
-          BOOK NOW
-        </Link>
+                >
+                  BOOK NOW
+                </Link>
 
-        <Link
-          href="/partnership"
-          onClick={() => setMenuOpen(false)}
-          className="border border-[#bfa34a] text-[#bfa34a]
+                <Link
+                  href="/partnership"
+                  onClick={() => setMenuOpen(false)}
+                  className="border border-[#bfa34a] text-[#bfa34a]
                      px-6 py-3 text-center tracking-wider"
-        >
-          Partnership
-        </Link>
-      </div>
+                >
+                  Partnership
+                </Link>
+              </div>
 
-    </div>
-  </div>
-</div>
+            </div>
+          </div>
+        </div>
 
       </header>
 
       {/* PAGE OFFSET */}
-<div className="h-[90px] md:h-[134px]" />
+      <div className="h-[90px] md:h-[134px]" />
     </>
   );
 }
